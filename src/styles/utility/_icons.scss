@@ -1,0 +1,29 @@
+/**
+
+  Base icon styles.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • General
+
+*/
+
+
+/* ---------------------------------------
+  General
+---------------------------------------- */
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: icon('default', 'height');
+  vertical-align: middle;
+  width: icon('default', 'height');
+
+  &--small {
+    height: icon('small', 'height');
+    width: icon('small', 'height');
+  }
+}

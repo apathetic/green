@@ -1,0 +1,96 @@
+/**
+
+  Theming: things that affect the look, display, and
+           polish of an element.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Transitions
+    • Z-index
+    • Borders
+    • Shadows
+
+*/
+
+/* ---------------------------------------
+  Transitions
+---------------------------------------- */
+
+$transition: (
+  fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1),
+  linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1),
+  fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1),
+  ease-in-out: cubic-bezier(0.4, 0, 0.6, 1),
+  fast-in-fast-out: cubic-bezier(0.25, 0.8, 0.25, 1),
+  swing: cubic-bezier(0.25, 0.8, 0.5, 1),
+);
+
+$transition-durations: (
+  snap: .1s,
+  fast: .165s,
+  brisk: .333s,
+  slow: .5s,
+  sleepy: 1s,
+);
+
+$primary-transition:
+  map-get($transition-durations, 'fast')
+  map-get($transition, swing) !default;
+$secondary-transition:
+  map-get($transition-durations, 'brisk')
+  map-get($transition, ease-in-out) !default;
+
+
+/* ---------------------------------------
+  Z-index
+---------------------------------------- */
+
+// TODO: we may consider consolidating one or two of these in the interests of clarity
+$z-index: (
+  behind: -1,
+  content: 100,    // general content on the page
+  control: 200,    // for UI controls, widgets, buttons, etc. These are given one level higher priority
+  page: 300,       // applies to page-level blocks, ie. site-header, side-nav, etc
+  screen: 400,     // covers all "standard" things visible on the screen: page-level blocks, UI/control things, general content
+  modal: 1000,     // covers all things, including other elements promoted along the z-axis.
+);
+
+/* ---------------------------------------
+  Borders
+---------------------------------------- */
+
+$border-radius: 4px;
+$borders: (
+  thin: 1px,
+  medium: 2px,
+  thick: 4px
+);
+
+
+/* ---------------------------------------
+  Elevation
+---------------------------------------- */
+
+$shadow-key-umbra-opacity: rgba(0, 15, 35, 0.04);
+$shadow-key-penumbra-opacity: rgba(0, 15, 35, 0.04);
+$shadow-key-ambient-opacity: rgba(0, 15, 35, 0.04);
+
+$shadow-key-umbra: (
+  0 2px 1px -1px $shadow-key-umbra-opacity,
+  0 2px 4px -1px $shadow-key-umbra-opacity,
+  0 4px 5px -2px $shadow-key-umbra-opacity
+);
+
+$shadow-key-penumbra: (
+  0 1px 1px 0 $shadow-key-penumbra-opacity,
+  0 4px 5px 0 $shadow-key-penumbra-opacity,
+  0 7px 9px 1px $shadow-key-penumbra-opacity
+);
+
+$shadow-key-ambient: (
+  0 1px 3px 0 $shadow-key-ambient-opacity,
+  0 1px 10px 0 $shadow-key-ambient-opacity,
+  0 2px 10px 1px $shadow-key-ambient-opacity
+);

@@ -1,0 +1,80 @@
+/**
+
+  Table
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Table
+
+*/
+
+/* ---------------------------------------
+  Table
+---------------------------------------- */
+/* stylelint-disable no-descending-specificity */
+
+.table {
+  &--bordered {
+    border: border(thin);
+    border-collapse: separate;
+    border-radius: $border-radius;
+    border-spacing: 0;
+
+    td,
+    th {
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    thead {
+      td,
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+
+  td,
+  th {
+    border-top: border(thin);
+    padding: 0.875rem;
+  }
+
+  thead {
+    td,
+    th {
+      background-color: colors('shades', 'light-grey');
+      border-bottom: border(medium);
+      border-top: none;
+      color: colors('text', 'dark');
+      font-weight: font-weight(medium);
+      text-align: left;
+      user-select: none;
+      white-space: nowrap;
+    }
+  }
+
+  tbody {
+    td {
+      font-weight: font-weight(regular);
+    }
+  }
+
+  tfoot {
+    tr {
+      td {
+        border: none;
+      }
+    }
+  }
+}

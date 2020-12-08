@@ -1,0 +1,95 @@
+/**
+
+  Breakpoint and grid helpers
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Breakpoint
+    • Grid
+    • Layout Helpers
+
+*/
+
+/* ---------------------------------------
+  Breakpoint
+---------------------------------------- */
+
+/**
+ * Breakpoint helper: accepts one of the following options:
+ *  'sm-only'
+ *  'md-only' | 'md' | 'md-and-down'
+ *  'lg-only' | 'lg' | 'lg-and-down'
+ *              'xl'
+*/
+@function breakpoint($value) {
+  $str: '';
+
+  @if map-has-key($display-breakpoints, $value) {
+    $str: map-get($display-breakpoints, $value);
+  } @else {
+    @warn 'breakpoint(): "#{$value}" is not defined in your $display-breakpoints setting.';
+  }
+
+  @return $str;
+}
+
+@mixin breakpoint($value) {
+  $str: breakpoint($value);
+
+  @if $str == '' {
+    @content;
+  } @else {
+    @media #{$str} {
+      @content;
+    }
+  }
+}
+
+
+/* ---------------------------------------
+  Grid
+---------------------------------------- */
+
+@mixin span($cols) {
+  grid-column: span #{$cols} / span #{$cols};
+}
+
+@mixin offset($start: 0, $end: 0) {
+  @if $start {
+    grid-column-start: $start;
+  }
+  @if $end {
+    grid-column-end: $end;
+  }
+}
+
+
+/* ---------------------------------------
+  Layout helpers
+---------------------------------------- */
+
+@mixin cover($scope: absolute) {
+  bottom: 0;
+  left: 0;
+  position: $scope; // absolute | fixed
+  right: 0;
+  top: 0;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin sticky {
+  $sticky-offset: $top-nav-height + space(3);
+
+  max-height: calc(100vh - #{$sticky-offset + space(3)});
+  position: sticky; // note: no effect IE11
+  top: $sticky-offset;
+}

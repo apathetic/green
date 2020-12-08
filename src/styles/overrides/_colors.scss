@@ -1,0 +1,53 @@
+/**
+
+  Display override classes. You may safely apply these on any
+  element to over-ride any pre-existing or inherited styles.
+  Note: overrides are the only place where !important is OK.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Background
+    • Text
+
+*/
+
+/* ---------------------------------------
+  Background
+---------------------------------------- */
+
+/* Shades */
+@each $color_name, $color_value in $shades {
+  @include bg-color($color_name, $color_value);
+}
+
+/* Brand colors */
+@each $color_name, $color_value in $brand-colors {
+  @include bg-color($color_name, $color_value);
+}
+
+/* Alert colors */
+@each $color_name, $color_value in $alert-colors {
+  @include bg-color($color_name, $color_value);
+}
+
+
+/* ---------------------------------------
+  Text
+---------------------------------------- */
+
+/* Brand colors */
+@each $color_name, $color_value in $brand-colors {
+  @include text-color($color_name, $color_value);
+}
+
+/* Text colors */
+@each $color_name, $color_value in $text-colors {
+  @include text-color($color_name, $color_value);
+}
+
+/* Alert colors */
+@each $color_name, $color_value in $alert-colors {
+  @include text-color($color_name, $color_value);
+}

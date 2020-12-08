@@ -1,0 +1,177 @@
+/**
+
+  All the things that will affect the _display_ of your content. This
+  includes breakpoint helpers (ie toggle display according to viewport),
+  overflow helpers, actual `display` classes (including hiding things),
+  z-index helpers, elevation, and borders.
+
+
+      ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Overflow
+    • Hidden
+    • Display
+    • Height
+    • Width
+    • Borders
+    • Rotate
+
+*/
+
+/* ---------------------------------------
+  Overflow
+---------------------------------------- */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+
+/* ---------------------------------------
+  Hidden
+---------------------------------------- */
+
+.hidden {
+  display: none !important;
+}
+
+@each $size, $media_query in $display-breakpoints {
+  #{$size}\:hidden {
+    @media #{$media_query} {
+      display: none !important;
+    }
+  }
+}
+
+
+/* ---------------------------------------
+  Display
+---------------------------------------- */
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+
+/* ---------------------------------------
+  Height
+---------------------------------------- */
+
+.h-full {
+  height: 100%;
+}
+
+
+/* ---------------------------------------
+  Width
+---------------------------------------- */
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+
+/* ---------------------------------------
+  Borders
+---------------------------------------- */
+
+.border {
+  border-width: get($borders, 'thin');
+}
+
+.no-border {
+  border-width: 0 !important;
+}
+
+.rounded {
+  border-radius: $border-radius;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.border-t {
+  border-top-width: get($borders, 'thin');
+}
+
+.border-r {
+  border-right-width: get($borders, 'thin');
+}
+
+.border-b {
+  border-bottom-width: get($borders, 'thin');
+}
+
+.border-l {
+  border-left-width: get($borders, 'thin');
+}
+
+.border-white {
+  border-color: colors('shades', 'white');
+}
+
+.border-blue {
+  border-color: colors('brand', 'blue');
+}
+
+.border-error {
+  border-color: colors('alert', 'error');
+}
+
+
+/* ---------------------------------------
+  Rotate
+---------------------------------------- */
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+
+
+
+
+[class*="aspect-"] {
+// .aspect-1\:1,
+// .aspect-16\:9 {
+  position: relative;
+
+  &::after {
+    display: block;
+    content: '';
+  }
+
+  > img {
+    @include cover();
+  }
+}
+
+.aspect-1\:1::after { padding-bottom: 100%; }
+.aspect-16\:9::after { padding-bottom: 56.25%; }

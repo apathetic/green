@@ -1,0 +1,68 @@
+/**
+
+  Typography: headings, paragraphs, body copy, etc
+              Note: including in base/
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Headings
+    • Paragraphs
+
+*/
+
+
+/* ---------------------------------------
+  Headings
+---------------------------------------- */
+
+h5,
+h6 {
+  @include heading-base;
+}
+
+h1,
+.heading-1 {
+  @include heading(1);
+}
+
+h2,
+.heading-2 {
+  @include heading(2);
+}
+
+h3,
+.heading-3 {
+  @include heading(3);
+}
+
+h4,
+.heading-4 {
+  @include heading(4);
+}
+
+.heading-jumbo {
+  font-size: 48px;
+
+  @include breakpoint('sm-only') {
+    font-size: typo('h1', 'size');
+    font-weight: typo('h1', 'weight');
+    line-height: typo('h1', 'line-height');
+  }
+}
+
+
+/* ---------------------------------------
+  Paragraphs
+---------------------------------------- */
+
+p {
+  margin-bottom: 1rem;
+}
+
+small,
+.text-small {
+  font-size: typo('small', 'size');
+  line-height: typo('small', 'line-height');
+}

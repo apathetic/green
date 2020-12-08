@@ -1,0 +1,90 @@
+/**
+
+Text override classes. You may safely apply these on any
+element to override any pre-existing or inherited styles.
+Note: overrides are the only place where !important is OK.
+
+◡◠ ✥ ◠◡
+
+Table of Contents:
+
+  • Text modifiers
+  • Font weight
+
+*/
+
+/* ---------------------------------------
+  Text modifiers
+---------------------------------------- */
+
+.font-italic {
+  font-style: italic !important;
+}
+
+.text-break-all {
+  word-break: break-all !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-no-underline {
+  text-decoration: none !important;
+}
+
+.text-no-wrap {
+  white-space: nowrap !important;
+}
+
+.text-pre-line {
+  white-space: pre-line !important;
+}
+
+.text-truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-strike-through {
+  text-decoration: line-through !important;
+}
+
+/* ---------------------------------------
+  Font weight
+---------------------------------------- */
+
+@each $name, $weight in $font-weights {
+  .font-weight-#{$name} {
+    font-weight: #{$weight} !important;
+  }
+}

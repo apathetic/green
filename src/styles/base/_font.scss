@@ -1,0 +1,42 @@
+/**
+
+  Font: font-faces used site-wide.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Font imports
+
+*/
+
+/* ---------------------------------------
+ Font imports
+---------------------------------------- */
+
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/static/fonts/sofia/SofiaProRegular.woff2') format('woff2'),
+    url('/static/fonts/sofia/SofiaProRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/static/fonts/sofia/SofiaProMedium.woff2') format('woff2'),
+    url('/static/fonts/sofia/SofiaProMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('/static/fonts/sofia/SofiaProSemiBold.woff2') format('woff2'),
+    url('/static/fonts/sofia/SofiaProSemiBold.woff') format('woff');
+}

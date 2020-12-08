@@ -1,0 +1,209 @@
+/**
+
+  Site button styles and variations.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Composables
+    • Base
+    • Types
+      - Primary
+      - Secondary
+      - Tertiary
+      - Icon
+      - Inline
+    • Colors
+    • Button Grid helper
+
+
+*/
+
+@function hexToRGB($hexColor) {
+  @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)}";
+}
+
+/* ---------------------------------------
+  Composables
+---------------------------------------- */
+
+@mixin base {
+  --button-color: /* */;
+  --button-text: /* */;
+  --button-opacity: 1;
+  background-color: rgba(var(--button-color), var(--button-opacity));
+  border-color: rgba(var(--button-color), 1);
+  color: var(--button-text);
+}
+
+@mixin ghost {
+  --button-opacity: 0; // no background i.e. transparent
+  &:hover,
+  &:active {
+    --button-opacity: 0.12;
+  }
+}
+
+@mixin blue {
+  --button-color: #{ hexToRGB(colors('brand', 'blue')) };
+  &:hover { --button-color: #{ hexToRGB(colors('button', 'hover')) }; }
+  &:active { --button-color: #{ hexToRGB(colors('brand', 'royal')) }; }
+}
+
+@mixin red {
+  --button-color: #{ hexToRGB(colors('alert', 'error')) };
+  &:hover { --button-color: #{ hexToRGB(colors('brand', 'watermelon')) }; }
+  &:active { --button-color: #{ hexToRGB(#9f001e) }; }
+}
+
+@mixin grey {
+  --button-color: #{ hexToRGB(colors('shades', 'dark-grey')) };
+}
+
+@mixin white {
+  --button-color: #{ hexToRGB(colors('shades', 'white')) };
+}
+
+
+/* ---------------------------------------
+  Base
+---------------------------------------- */
+
+button {
+  display: inline-block;
+  font-size: typo('button', 'size');
+  vertical-align: middle;
+}
+
+.button {
+  border-radius: $border-radius;
+  border-width: get($borders, 'thin');
+  display: inline-block;
+  font-size: typo('button', 'size');
+  font-weight: typo('button', 'weight');
+  line-height: (input('height') - (get($borders, 'thin') * 2));
+  margin: 0;
+  min-width: input('min-width');
+  padding: 0 space(2);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.14);
+    outline: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+
+/* ---------------------------------------
+  Types
+---------------------------------------- */
+
+.button {
+  &--primary {
+    @include base;
+    @include blue;
+    --button-text: #{colors('text', 'white')} !important;
+  }
+
+  &--secondary {
+    @include base;
+    @include ghost;
+    @include grey;
+    --button-text: #{colors('text', 'medium')};
+  }
+
+  &--tertiary {
+    @include base;
+    @include ghost;
+    @include white;
+    --button-text: #{colors('text', 'white')};
+  }
+
+  &--icon {
+    // https://developers.google.com/web/fundamentals/accessibility/accessible-styles
+    border: 0;
+    border-radius: 50%;
+    height: space(5);
+    min-width: 0;
+    padding: space(2);
+    width: space(5);
+
+    &[disabled] {
+      color: colors('text', 'medium');
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--inline {
+    border: 0;
+    color: colors('text', 'link');
+    line-height: $line-height;
+    min-width: 0;
+    padding: 0;
+
+    &[disabled] {
+      color: colors('text', 'medium');
+    }
+  }
+}
+
+
+/* ---------------------------------------
+  Colors
+---------------------------------------- */
+
+.button {
+  &--blue {
+    @include blue;
+    --button-text: #{ colors('brand', 'blue') };
+  }
+
+  &--red {
+    @include red;
+    --button-text: #{ colors('alert', 'error') };
+  }
+}
+
+
+/* ---------------------------------------
+  Button Grid
+---------------------------------------- */
+
+.button-grid {
+  display: flex;
+  grid-column-end: -1 !important;
+
+  > .button {
+    width: 50%;
+  }
+
+  > .button + .button {
+    margin-left: space(3);
+  }
+
+  @include breakpoint('md') {
+    display: inline-flex;
+
+    > .button {
+      width: auto;
+    }
+  }
+}

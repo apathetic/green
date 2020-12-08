@@ -1,0 +1,151 @@
+/**
+
+  List Items
+
+  Styles to support "List Items". These are `module` styles,
+  intended to be `composed` by a Vue List Item component.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • List Items
+      - header
+    • List Item
+      - cell
+      - actions
+
+*/
+
+$border: border('thin');
+
+/* ---------------------------------------
+  List Items
+---------------------------------------- */
+
+.list-items {
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  min-width: 100%;
+  position: relative;
+
+  @include breakpoint('lg') {
+    @include elevation (1);
+  }
+}
+
+.header {
+  background-color: colors('shades', 'lightest-grey');
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  color: colors('text', 'dark');
+  display: none;
+  font-weight: 500;
+  margin-bottom: 1px;
+  padding: space(2) space(3);
+  transition: padding $primary-transition;
+  z-index: 1;
+
+  @include breakpoint('lg') {
+    align-items: center;
+    display: flex;
+  }
+
+  &:global(.is-sticky) {
+    @include elevation(2);
+
+    border-radius: 0;
+    padding: space(1) space(3);
+    z-index: z-index('control') + 1;
+  }
+
+  :global(.input--checkbox) {
+    label {
+      min-height: space(3);
+    }
+  }
+}
+
+.header-grid > div,
+.header-grid > span {
+  align-items: center;
+  display: flex;
+}
+
+
+/* ---------------------------------------
+  List Item
+---------------------------------------- */
+
+.list-item {
+  background: colors('shades', 'white');
+  border-radius: $border-radius;
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: space(3);
+  padding: space(2);
+  padding-top: space(5);
+  position: relative;
+  row-gap: var(--grid-gutter);
+
+  @include elevation (1);
+
+  @include breakpoint('md') {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include breakpoint('lg') {
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 1px;
+    padding: space(3);
+    row-gap: 0;
+
+    &:last-child {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    :global(.input-label) {
+      display: none !important;
+    }
+  }
+}
+
+.cell {
+  background-color: #f6f8f9; /* not in vars... yet */
+  border-radius: $border-radius;
+  padding: space(1);
+
+  > :global(.input) { width: 100%; }
+
+  @include breakpoint('lg') {
+    background: none;
+    border-radius: 0;
+    display: flex;
+    padding: 0;
+  }
+}
+
+.actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include breakpoint('lg') {
+    position: initial;
+  }
+}
+
+.select-checkbox {
+  left: space(2);
+  position: absolute;
+  top: 0;
+
+  @include breakpoint('lg') {
+    position: initial;
+  }
+}

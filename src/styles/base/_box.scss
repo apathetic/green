@@ -1,0 +1,14 @@
+/**
+
+  Box: Emulated "ibox" style, from olden days.
+
+*/
+
+.box {
+  @include elevation(1);
+
+  // background: colors('shades', 'white');
+  border-radius: $border-radius;
+  background: var(--color-theme-secondary);
+  padding: space(3) var(--grid-gutter);
+}

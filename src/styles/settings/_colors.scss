@@ -1,0 +1,114 @@
+/**
+
+  Colors: brand, text, buttons, inputs, and
+          relevant shades of colors.
+
+          Note: we try to use tokens throughout,
+          rather than explicit names.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Brand
+    • Text
+    • Buttons
+    • Alerts
+    • Shades
+    • Exported
+
+*/
+
+$purple: #1e164b !default;
+$royal: #303ab2 !default;
+$blue: #0072f0 !default;
+$seafoam: #3cdbc0 !default;
+$teal: #01bbc8 !default;
+$green: #00816d !default;
+$yellow: #ffd400 !default;
+$orange: #ff9425 !default;
+$watermelon: #e5554f !default;
+
+$hover: #338ff3 !default;
+
+
+/* ---------------------------------------
+  Brand
+---------------------------------------- */
+
+$brand-colors: (
+  'teal': $teal,
+  'seafoam': $seafoam,
+  'blue': $blue,
+  'purple': $purple,
+  'royal': $royal,
+  'green': $green,
+  'yellow': $yellow,
+  'orange': $orange,
+  'watermelon': $watermelon
+);
+
+
+/* ---------------------------------------
+  Text
+---------------------------------------- */
+
+// NOTE: for backgrounds, use shades, below.
+$text-colors: (
+  'dark': #262626,   // primary
+  'medium': #676a6c, // secon
+  'white': #fff,     // inverted
+  'link': $blue,
+  'disabled': #c5c9d4,
+);
+
+
+/* ---------------------------------------
+  Buttons
+---------------------------------------- */
+
+// TODO REMOVE:
+$button-colors: (
+  'primary': $blue,
+  'hover': $hover,
+  'active': rgba(#999, 0.4),
+);
+
+
+/* ---------------------------------------
+  Alerts
+---------------------------------------- */
+
+$alert-colors: (
+  'error': #e4002b,
+  'warning': $orange,
+  'success': $teal,
+  'info': $blue,
+);
+
+
+/* ---------------------------------------
+  Shades
+---------------------------------------- */
+
+// NOTE: for typography, use text-colors, above.
+$shades: (
+  'white': #fff,
+  'lightest-grey': #f6f8f9,
+  'light-grey': #eef2f4,
+  'grey': #c5c9d4,
+  'dark-grey': #676a6c,
+  'black': #262626,
+);
+
+/* ---------------------------------------
+  Exported
+---------------------------------------- */
+
+$colors: (
+  'brand': $brand-colors,
+  'text': $text-colors,
+  'button': $button-colors,  // TODO remove
+  'alert': $alert-colors,
+  'shades': $shades
+);

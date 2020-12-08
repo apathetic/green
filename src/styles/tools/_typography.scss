@@ -1,0 +1,93 @@
+/**
+
+  Typograpohy and icon helpers and mixins
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Font weight
+    • Typography
+    • Icons
+    • Headings
+
+*/
+
+/* ---------------------------------------
+  Font weight
+---------------------------------------- */
+
+@function font-weight($weight: regular) {
+  @return if(
+    map-has-key($font-weights, $weight),
+    map-get($font-weights, $weight),
+    map-get($font-weights, regular)
+  );
+}
+
+
+/* ---------------------------------------
+  Typography
+---------------------------------------- */
+
+@function typo($keys...) {
+  @if not map-has-key($typography, nth($keys, 1)) {
+    @warn 'No type found for `#{ nth($keys, 1) }`.';
+  }
+
+  @return get($typography, $keys...);
+}
+
+// Constrain a block of text to a fixed number of `$rows`.
+// An ellipsis will be shown where the text is clamped.
+@mixin clamp($rows: 3) {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: #{$rows};
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------
+  Icons
+---------------------------------------- */
+
+@function icon($keys...) {
+  @if not map-has-key($icons, nth($keys, 1)) {
+    @warn 'No type found for `#{ nth($keys, 1) }`.';
+  }
+
+  @return get($icons, $keys...);
+}
+
+
+/* ---------------------------------------
+  Headings
+---------------------------------------- */
+
+$properties: (
+  "line-height": "line-height",
+  "size": "font-size",
+  "weight": "font-weight"
+);
+
+@mixin heading-props($size) {
+  @each $key, $prop in $properties {
+    #{$prop}: typo('h#{$size}', $key);
+  }
+}
+
+@mixin heading-base {
+  color: var(--colors-text);
+  font-family: $font-family-primary;
+}
+
+@mixin heading($level) {
+  @include heading-base;
+  @include heading-props($level);
+}
+
+
+@mixin heading-3 {
+  @include heading(3);
+}

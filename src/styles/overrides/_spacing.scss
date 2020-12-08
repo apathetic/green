@@ -1,0 +1,136 @@
+/**
+
+  Helper override classes. You may safely apply these on any
+  element to over-ride any pre-existing or inherited styles.
+  Note: overrides are the only place where !important is OK.
+
+      ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Overview
+    • Spacers
+
+
+/* ---------------------------------------
+  Overview
+------------------------------------------
+
+Tachyon-inspired margin and padding classes. These may be
+applied to any element to quickly and easily give a known
+and prescribed amount (ie. one that is defined and inherited
+from our settings ONLY) of space around an element.
+
+  Base:
+    p = padding
+    m = margin
+
+  Modifiers:
+    a = all
+    x = x-axis (left, right)
+    y = y-axis (top, bottom)
+    t = top
+    r = right
+    b = bottom
+    l = left
+
+    0 = none
+    1 = 1st step in spacing scale
+    2 = 2nd step in spacing scale
+    3 = 3rd step in spacing scale
+    4 = 4th step in spacing scale
+    5 = 5th step in spacing scale
+
+  Examples:
+    .mr-1  = apply 1 unit of space to the right margin
+    .pl-3  = apply 3 units of space to the left padding
+    .mx-4  = apply 4 units of space to the left and right margin
+    .pa-0  = no padding on all sides
+
+
+/* ---------------------------------------
+  Spacers
+---------------------------------------- */
+
+// NOTE: m-auto classes are _great_ for positioning things in tandem w/ flex
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-bottom: auto !important;
+  margin-top: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+@each $level, $space in $spacers {
+  $i: index($spacers, ($level $space)) - 1;
+
+  .mt-#{$i} {
+    margin-top: #{$space} !important;
+  }
+
+  .mr-#{$i} {
+    margin-right: #{$space} !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{$space} !important;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$space} !important;
+  }
+
+  .mx-#{$i} {
+    margin-left: #{$space} !important;
+    margin-right: #{$space} !important;
+  }
+
+  .my-#{$i} {
+    margin-bottom: #{$space} !important;
+    margin-top: #{$space} !important;
+  }
+
+  .ma-#{$i} {
+    margin: #{$space} !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$space} !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$space} !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{$space} !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$space} !important;
+  }
+
+  .px-#{$i} {
+    padding-left: #{$space} !important;
+    padding-right: #{$space} !important;
+  }
+
+  .py-#{$i} {
+    padding-bottom: #{$space} !important;
+    padding-top: #{$space} !important;
+  }
+
+  .pa-#{$i} {
+    padding: #{$space} !important;
+  }
+}

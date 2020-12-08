@@ -1,0 +1,299 @@
+/**
+
+  Forms
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Form
+    • Base
+    • Input
+    • Checkbox & Radio
+    • Text Editor
+
+*/
+
+
+/* ---------------------------------------
+  Form
+---------------------------------------- */
+
+.form {
+  &__errors {
+    border: border(thin) colors('alert', 'error');
+    color: colors('alert', 'error');
+    display: inline-block;
+    font-size: typo('body', 'size');
+    min-width: 300px;
+    padding: space(2);
+    text-align: center;
+  }
+}
+
+
+/* ---------------------------------------
+  Base
+---------------------------------------- */
+
+input {
+  &[disabled],
+  &[readonly] {
+    @include input-disabled;
+  }
+
+  &::placeholder {
+    text-transform: none;
+  }
+}
+
+input,
+select,
+textarea {
+  &::placeholder {
+    color: colors('text', 'disabled');
+    opacity: 1;
+  }
+}
+
+select {
+  border: border(thin);
+  color: colors('text', 'dark');
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* ---------------------------------------
+  Input
+---------------------------------------- */
+
+.input {
+  position: relative;
+
+  // TODO remove:
+  label {
+    @extend .input-label;
+  }
+
+  input,
+  select {
+    height: input(height);
+  }
+
+  // TODO remove:
+  input,
+  select,
+  textarea {
+    @extend .input-field;
+  }
+
+  &.has-error {
+    color: colors('alert', 'error');
+
+    .input-field,
+    input,
+    select,
+    textarea {
+      border-color: colors('alert', 'error');
+    }
+  }
+}
+
+.input-field {
+  background: colors('shades', 'white');
+  border: border(thin);
+  border-radius: $border-radius;
+  color: colors('text', 'dark');
+  display: block;
+  font-family: $font-family-primary;
+  font-size: typo('button', 'size');
+  font-weight: font-weight('regular');
+  outline: none;
+  padding: 0 input('padding-x');
+  width: 100%;
+
+  &:hover {
+    border-color: colors('shades', 'grey');
+  }
+
+  &:active,
+  &:focus {
+    @include elevation(2);
+    border-color: colors('brand', 'blue');
+  }
+}
+
+.input-label {
+  color: colors('text', 'dark');
+  display: block;
+  font-size: var(--font-size-label);
+  font-weight: font-weight('medium');
+  line-height: space(3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* ---------------------------------------
+  Checkbox & Radio
+---------------------------------------- */
+
+/* stylelint-disable no-descending-specificity */
+.input--checkbox,
+.input--radio {
+  display: block;
+  margin: space(1) 0;
+
+  @include breakpoint('lg') {
+    margin: 0;
+  }
+
+  input {
+    @include screenreader-only;
+  }
+
+  .input-label,
+  label {
+    cursor: pointer;
+    display: inline-block;
+    line-height: input('inner-height');
+    min-height: input('height');
+    overflow: visible;
+    padding:
+      input('padding-y')
+      0
+      input('padding-y')
+      (input('selection-control-size') + (input('padding-x') / 2));
+
+    position: relative;
+    vertical-align: top;
+
+    @include breakpoint('lg') {
+      padding-left: (input('selection-control-size') + input('padding-x'));
+    }
+
+    &::before {
+      background: colors('shades', 'white');
+      border: border('thin');
+      content: '';
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &::before,
+    &::after {
+      height: input('selection-control-size');
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: input('selection-control-size');
+    }
+  }
+
+  input:focus + label::before {
+    // TODO: create function that generates these focus styles; the Button component shares this already
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.14);
+    outline: none;
+  }
+
+  input:focus:not(:disabled) + label::before {
+    border-color: colors('brand', 'blue');
+  }
+
+  input:disabled,
+  input:disabled + label {
+    cursor: auto;
+  }
+
+  input:disabled + label::before {
+    background: colors('shades', 'light-grey');
+  }
+
+  input:not(:disabled):not(:checked) + label:hover::before {
+    border-color: colors('brand', 'blue');
+  }
+}
+
+.input--checkbox {
+  label::before {
+    border-radius: $border-radius;
+  }
+
+  input:checked + label::before,
+  input:indeterminate + label::before {
+    background: colors('brand', 'blue');
+    border: none;
+  }
+
+  input:checked + label::after {
+    content: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.89 8.281a.723.723 0 0 1 .22.531.723.723 0 0 1-.22.532l-6.718 6.719a.723.723 0 0 1-.531.218.723.723 0 0 1-.532-.218l-3.89-3.891A.723.723 0 0 1 6 11.64c0-.209.073-.386.219-.532l1.062-1.062a.723.723 0 0 1 .532-.219.72.72 0 0 1 .53.219l2.298 2.305 5.125-5.133a.723.723 0 0 1 .53-.219c.21 0 .386.073.532.219l1.063 1.062z" fill="white"/></svg>');
+  }
+
+  input:indeterminate + label::after {
+    content: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 10.4C6 10.1791 6.17909 10 6.4 10H17.6C17.8209 10 18 10.1791 18 10.4V12.6C18 12.8209 17.8209 13 17.6 13H6.4C6.17909 13 6 12.8209 6 12.6V10.4Z" fill="white"/></svg>');
+  }
+
+  input:disabled:checked + label::before {
+    background: colors('shades', 'grey');
+  }
+}
+
+.input--radio {
+  label::before,
+  label::after {
+    border-radius: 50%;
+  }
+
+  input:checked + label::after {
+    background: colors('brand', 'blue');
+    content: '';
+    height: 14px;
+    left: 3px;
+    width: 14px;
+  }
+
+  input:checked:disabled + label::after {
+    background: colors('shades', 'grey');
+  }
+}
+/* stylelint-enable */
+
+.input__icon {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: input(height);
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: input(height);
+}
+
+.input__symbol {
+  align-items: center;
+  display: flex;
+  height: input(height);
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: input(height) + space(1);
+
+  &--prepend {
+    left: 0;
+  }
+
+  &--append {
+    right: 0;
+  }
+}
+
+.hint {
+  display: inline-block;
+  margin-top: 4px;
+}

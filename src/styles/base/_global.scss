@@ -1,0 +1,116 @@
+/**
+
+  Global things that will be inherited throughout
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Global
+
+*/
+
+
+/* ---------------------------------------
+  Global
+---------------------------------------- */
+
+html {
+  font-size: $font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-theme-background);
+  color: var(--color-text-primary);
+
+  font-family: $font-family-primary;
+  font-size: typo('body', 'size');
+  font-weight: typo('body', 'weight');
+  line-height: $line-height;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+// THEME variables. Note: no relation to sass maps...
+:root {
+  --color-brand-purple: #{colors('brand', 'purple')};
+  --color-brand-royal: #{colors('brand', 'royal')};
+  --color-brand-blue: #{colors('brand', 'blue')};
+  --color-brand-seafoam: #{colors('brand', 'seafoam')};
+  --color-brand-teal: #{colors('brand', 'teal')};
+  --color-brand-green: #{colors('brand', 'green')};
+  --color-brand-yellow: #{colors('brand', 'yellow')};
+  --color-brand-orange: #{colors('brand', 'orange')};
+  --color-brand-watermelon: #{colors('brand', 'watermelon')};
+
+  --color-alert-error: #{colors('alert', 'error')};
+  --color-alert-warning: #{colors('alert', 'warning')};
+  --color-alert-success: #{colors('alert', 'success')};
+  --color-alert-info: #{colors('alert', 'info')};
+
+  --color-text: #{colors('text', 'dark')};
+  --color-text-secondary: #{colors('text', 'medium')};
+  --color-text-inverted: #{colors('text', 'white')};
+
+  --font-size: $font-size;
+  --font-size-h1: #{typo('h1', 'size')};
+  --font-size-button: #{typo('button', 'size')};
+  --font-size-label: #{typo('small', 'size')};
+
+  --color-theme-primary: #{colors('brand', 'blue')};
+  --color-theme-secondary: #{colors('brand', 'purple')};
+  --color-theme-accent: #{colors('shades', 'white')};
+  --color-theme-background: #{colors('shades', 'light-grey')};
+
+  @include breakpoint('lg') {
+    --font-size-label: $font-size;
+  }
+}
+
+
+
+/* switch values over dark color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-theme-primary: #1976D2;
+    --color-theme-secondary: #424242;
+    --color-theme-accent: #565656;
+    --color-theme-background: #262626;
+
+    --color-text: #eee;
+    --color-text-inverted: #262626;
+  }
+}
+
+
+// THEME variables
+:root {
+  --color-brand-purple: #{colors('brand', 'purple')};
+  --color-brand-royal: #{colors('brand', 'royal')};
+  --color-brand-blue: #{colors('brand', 'blue')};
+  --color-brand-seafoam: #{colors('brand', 'seafoam')};
+  --color-brand-teal: #{colors('brand', 'teal')};
+  --color-brand-green: #{colors('brand', 'green')};
+  --color-brand-yellow: #{colors('brand', 'yellow')};
+  --color-brand-orange: #{colors('brand', 'orange')};
+  --color-brand-watermelon: #{colors('brand', 'watermelon')};
+
+  --color-text: #{colors('text', 'dark')};
+  --color-text-secondary: #{colors('text', 'medium')};
+  --color-text-inverted: #{colors('text', 'white')};
+
+  --font-size: $font-size;
+  --font-size-h1: #{typo('h1', 'size')};
+  --font-size-button: #{typo('button', 'size')};
+  --font-size-label: #{typo('small', 'size')};
+
+  @include breakpoint('lg') {
+    --font-size-label: #{typo('button', 'size')};
+  }
+}

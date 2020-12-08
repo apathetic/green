@@ -1,0 +1,37 @@
+{
+  "extends": "stylelint-config-standard",
+	"plugins": [
+    "stylelint-order"
+	],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always", {
+        "except": ["first-nested", "blockless-after-same-name-blockless"],
+        "ignore": ["after-comment"],
+        "ignoreAtRules": ["if", "else"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      null, {
+        "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always", { "ignoreAtRules": ["if", "else"] }
+    ],
+    "comment-whitespace-inside": null,
+    "indentation": [ 2,
+      { "ignore": ["inside-parens"] }
+    ],
+    "max-empty-lines": 3,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-alphabetical-order": true,
+    "number-leading-zero": "always",
+    "number-no-trailing-zeros": true,
+    "selector-pseudo-element-colon-notation": "double"
+  }
+}
+

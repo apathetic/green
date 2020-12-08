@@ -1,0 +1,46 @@
+/**
+
+  Color helpers
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Colors
+
+*/
+
+/* ---------------------------------------
+  Colors
+---------------------------------------- */
+
+@function colors($keys...) {
+  @if not map-has-key($colors, nth($keys, 1)) {
+    @warn 'No color found for `#{ nth($keys, 1) }`.';
+  }
+
+  @return get($colors, $keys...);
+}
+
+@function lighten-color($color, $amount: 8%) {
+  @return mix($color, #fff, $amount);
+}
+
+@function darken-color($color, $amount: 70%) {
+  @return mix($color, #000, $amount);
+}
+
+
+// stylelint-disable declaration-no-important
+@mixin bg-color($color_name, $color_value) {
+  .bg-#{$color_name} {
+    background-color: $color_value !important;
+    border-color: $color_value !important;
+  }
+}
+
+@mixin text-color($color_name, $color_value) {
+  .color-#{$color_name} {
+    color: $color_value !important;
+  }
+}

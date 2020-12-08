@@ -1,0 +1,25 @@
+/**
+
+  Input element settings
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Input
+
+*/
+
+
+/* ---------------------------------------
+  Input
+---------------------------------------- */
+
+$inputs: (
+  selection-control-size: 20px,
+  min-width: 144px, // buttons, form elements
+  height: space(4),
+  padding-y: space(1),
+  padding-x: space(2),
+  inner-height: space(3),
+);

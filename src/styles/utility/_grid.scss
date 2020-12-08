@@ -1,0 +1,161 @@
+/**
+
+  Grid and layout stuffs: CSS grids and flex helpers, grid
+  gutters, spacing.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • CSS Grid
+    • Flex
+
+*/
+
+:root {
+  --grid-gutter: #{$grid-gutter / 2};
+
+  @include breakpoint('lg') {
+    --grid-gutter: #{$grid-gutter};
+  }
+}
+
+
+/* ---------------------------------------
+  CSS Grid
+---------------------------------------- */
+
+.grid {
+  column-gap: var(--grid-gutter);
+  display: grid;
+  grid-column-gap: var(--grid-gutter); // iOS fix
+  grid-row-gap: space(3); // iOS fix
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: space(3);
+
+  > * { min-width: 0; } // Fix for CSS grid, https://daverupert.com/2017/09/breaking-the-grid/
+}
+
+
+// DEPRECATED
+// #######################################
+.grid {
+  @include breakpoint('md') {
+    grid-template-columns: repeat(12, 1fr);
+
+    &--2cols,
+    &--4cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .span-#{$i} {
+      @include span($i);
+    }
+  }
+
+  @include breakpoint('lg') {
+    &--4cols {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+// END DEPRECATED
+// #######################################
+
+
+$start: 1;
+$end: 12;
+
+// TODO roll in to loop, below
+@each $i in $grid-columns {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+// Note: new syntax to not conflict w/ existing span-xx classes
+@for $i from $start through $end {
+  .col-span-#{$i} {
+    @include span($i);
+  }
+}
+
+@each $size in ('md', 'lg') {
+  @include breakpoint($size) {
+
+    .#{$size}\: {
+      @for $i from $start through $end {
+        // column spans
+        &col-span-#{$i} {
+          @include span($i);
+        }
+
+        // column offsets
+        &col-start-#{$i} {
+          @include offset($i);
+        }
+
+        // column order
+        &order-#{$i} {
+          order: $i;
+        }
+      }
+
+      // grid columns
+      @each $i in $grid-columns {
+        &grid-cols-#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
+    }
+  }
+}
+
+
+/* ---------------------------------------
+  Flex
+---------------------------------------- */
+
+// Opinionated flex utility classes.
+// Assumes horizontal flex only (ie `flex-direction: row` is implicit)
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-initial { flex: 0 1 auto; }
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-none { flex: none; }
+.flex-col { flex-direction: column; }
+
+//horizontal
+.align-center { justify-content: center; }
+.align-right { justify-content: flex-end; }
+.align-spaced { justify-content: space-around; }
+.align-justify { justify-content: space-between; }
+
+// vertical
+.align-top { align-items: flex-start; }
+.align-bottom { align-items: flex-end; }
+.align-middle { align-items: center; }
+
+// align self
+.align-self-start { align-self: flex-start; }
+.align-self-end { align-self: flex-end; }
+.align-self-center { align-self: center; }
+.align-self-baseline { align-self: baseline; }
+.align-self-auto { align-self: auto; }
+.align-self-stretch { align-self: stretch; }
+
+
+/* ---------------------------------------
+  Container
+---------------------------------------- */
+
+.container {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 var(--grid-gutter);
+  position: relative;
+  width: 100%;
+}

@@ -1,0 +1,86 @@
+/**
+
+  Typography: site-wide sizes, weights and styles
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • General
+    • Element-specific
+    • Icons
+
+*/
+
+/* ---------------------------------------
+  General
+---------------------------------------- */
+
+$font-family-primary: 'Sofia', sans-serif;
+$font-family-secondary: serif;
+$font-size: 14px;
+$line-height: 1.5;
+$font-weights: (
+  regular: 400,
+  medium: 500,
+  bold: 600
+);
+
+
+/* ---------------------------------------
+  Element-specific
+---------------------------------------- */
+
+$typography: (
+  h1: (
+    line-height: 32/24,
+    size: #{24px / $font-size}rem,
+    weight: map-get($font-weights, 'medium')
+  ),
+  h2: (
+    line-height: 28/20,
+    size: #{20px / $font-size}rem,
+    weight: map-get($font-weights, 'medium')
+  ),
+  h3: (
+    line-height: 24/16,
+    size: #{16px / $font-size}rem,
+    weight: map-get($font-weights, 'medium')
+  ),
+  h4: (
+    line-height: 20/14,
+    size: #{14px / $font-size}rem,
+    weight: map-get($font-weights, 'medium')
+  ),
+  body: (
+    line-height: 20/14,
+    size: 1rem,
+    weight: 400,
+  ),
+  small: (
+    line-height: 16/12,
+    size: #{12px / $font-size}rem,
+    weight: 400,
+  ),
+  button: (
+    line-height: 24/14,
+    size: #{14px / $font-size}rem,
+    weight: 600,
+  )
+);
+
+
+/* ---------------------------------------
+  Icons
+---------------------------------------- */
+
+$icons: (
+  default: (
+    height: 24px,
+    width: 24px,
+  ),
+  small: (
+    height: $font-size,
+    width: $font-size,
+  )
+);

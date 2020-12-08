@@ -1,0 +1,24 @@
+/**
+
+  Global things that will be inherited throughout
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Links
+
+*/
+
+/* ---------------------------------------
+  Links
+---------------------------------------- */
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,78 @@
+/**
+
+  Layout: Grid spacing, breakpoints, and container widths
+          live in here. Note that we use CSS grids for
+          layout, so no classes required for that!
+
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Grid
+    • Breakpoints
+    • Container
+    • Sidebar (navigation)
+    • Top nav
+    • Logo
+
+*/
+
+
+/* ---------------------------------------
+  Grid
+---------------------------------------- */
+
+$grid-breakpoints: (
+  sm: (null,   640px),
+  md: (641px,  960px),
+  lg: (961px,  1320px),
+  xl: (1321px, null)
+);
+
+$grid-gutter: 24px;
+$grid-columns: (2, 4, 8, 12);
+
+
+/* ---------------------------------------
+  Breakpoints
+---------------------------------------- */
+
+$display-breakpoints: (
+  sm-only: 'screen and (max-width: #{ nth(map-get($grid-breakpoints, sm), 2) })',
+  md-only: 'screen and (min-width: #{ nth(map-get($grid-breakpoints, md), 1) }) and (max-width: #{ nth(map-get($grid-breakpoints, md), 2) })',
+  lg-only: 'screen and (min-width: #{ nth(map-get($grid-breakpoints, lg), 1) }) and (max-width: #{ nth(map-get($grid-breakpoints, lg), 2) })',
+  md: 'screen and (min-width: #{ nth(map-get($grid-breakpoints, md), 1) })',
+  lg: 'screen and (min-width: #{ nth(map-get($grid-breakpoints, lg), 1) })',
+  xl: 'screen and (min-width: #{ nth(map-get($grid-breakpoints, xl), 1) })',
+  md-and-down: 'screen and (max-width: #{ nth(map-get($grid-breakpoints, md), 2) })',
+  lg-and-down: 'screen and (max-width: #{ nth(map-get($grid-breakpoints, lg), 2) })',
+);
+
+
+/* ---------------------------------------
+  Container
+---------------------------------------- */
+
+$container-width: 1400px !default;
+
+
+/* ---------------------------------------
+  Sidebar
+---------------------------------------- */
+
+$sidebar-width: 270px !default;
+
+
+/* ---------------------------------------
+  Top nav
+---------------------------------------- */
+
+$top-nav-height: 60px !default;
+
+
+/* ---------------------------------------
+  Logo
+---------------------------------------- */
+
+$logo-height: 21px !default;

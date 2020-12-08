@@ -1,0 +1,103 @@
+/**
+
+  Transitions: scale, slides, fades
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Global
+    • Vue
+
+*/
+
+/* ---------------------------------------
+  Global
+---------------------------------------- */
+// ...
+
+/* ---------------------------------------
+  Vue-specific
+---------------------------------------- */
+
+.scale {
+  &-enter-active,
+  &-leave-active {
+    transition: $secondary-transition;
+  }
+
+  &-enter,
+  &-leave,
+  &-leave-to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.slide-y {
+  &-enter-active,
+  &-leave-active {
+    transition: $primary-transition;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+
+.slide-x {
+  &-enter-active,
+  &-leave-active {
+    transition: $primary-transition;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+}
+
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity $primary-transition;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-to {
+    opacity: 1;
+  }
+}
+
+.expand {
+  $delay: map-get($transition-durations, 'fast');
+  &-enter-active,
+  &-leave-active {
+    transition:
+      height $secondary-transition,
+      opacity map-get($transition-durations, 'slow') $delay,
+      transform map-get($transition-durations, 'slow') $delay;
+  }
+
+  &-enter,
+  &-leave-to {
+    height: 0;
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition-delay: 0s;
+  }
+
+  &-leave,
+  &-enter-to {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,40 @@
+.page-header { // [TODO] rename this so it doesnt conflict w/ BS?  Then, clean extra styles
+  align-items: flex-start;
+  border-bottom: 0; // Removes border added by legacy pages bootstrap.min.css
+  display: grid;
+  gap: var(--grid-gutter);
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: space(3) var(--grid-gutter) space(4);
+  width: 100%;
+
+  h1 {
+    margin-bottom: space(1);
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint('lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__actions {
+    // margin-top: space(2);
+
+    @include breakpoint('lg') {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__actions--right {
+    @include breakpoint('lg') {
+      text-align: right;
+    }
+  }
+
+}
+

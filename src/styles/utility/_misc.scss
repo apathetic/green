@@ -1,0 +1,66 @@
+/**
+
+  Miscellaneous utility classes.
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Cursor
+    • Position
+    • Elevation
+    • Misc
+
+*/
+
+/* ---------------------------------------
+  Cursor
+---------------------------------------- */
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------
+  Position
+---------------------------------------- */
+
+.absolute { position: absolute; }
+.relative { position: relative; }
+
+
+/* ---------------------------------------
+  Elevation
+---------------------------------------- */
+
+/**
+ * elevation-1: "sm", used mostly for in-page items. Cards, List Items
+ * elevation-2: "med", used mostly for UI / UX controls. Drawers, Modals, Notifications.
+ * elevation-3: "lg" used mostly for Page level items. UI, layout
+ */
+
+.elevation-1 {
+  @include elevation(1);
+}
+
+.elevation-2 {
+  @include elevation(2);
+}
+
+.elevation-3 {
+  @include elevation(3);
+}
+
+
+/* ---------------------------------------
+  Misc
+---------------------------------------- */
+
+.show-empty:empty::before {
+  content: "—";
+}

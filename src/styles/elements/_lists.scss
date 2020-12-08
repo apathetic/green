@@ -1,0 +1,31 @@
+/**
+
+  Lists
+
+       ◡◠ ✥ ◠◡
+
+  Table of Contents:
+
+    • Lists
+
+*/
+
+/* ---------------------------------------
+  Lists
+---------------------------------------- */
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &.bullets {
+    list-style-type: disc;
+    padding-left: space(4);
+
+    li {
+      margin-bottom: space(2);
+    }
+  }
+}
