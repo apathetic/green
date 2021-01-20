@@ -39,7 +39,7 @@
   import { convertDecimal, decimalSeparator, sanitizeDecimal } from '@/utils/i18n';
 
   export default {
-    name: 'g-input',
+    name: 'z-input',
 
     inheritAttrs: false,
 

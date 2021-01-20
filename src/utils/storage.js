@@ -1,6 +1,6 @@
 import { hashCode } from './helpers';
 
-const PREFIX = 'g-';
+const PREFIX = 'z-';
 
 /**
  * Persist an item to localStorage. Generate a hash based on the current URL,

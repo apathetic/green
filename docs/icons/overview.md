@@ -1,11 +1,11 @@
 ---
 title: "Overview"
-description: "GreenUI SVG icons and usage"
+description: "ZigZagUI SVG icons and usage"
 ---
 
 # Icons
 
-> The GreenUI library uses an svg-based icon system, with a generated `spritesheet.svg`.
+> The ZigZagUI library uses an svg-based icon system, with a generated `spritesheet.svg`.
 
 ## Format
 

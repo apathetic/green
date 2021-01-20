@@ -10,13 +10,13 @@ import Modal from '@/components/Modal';
 import Radio from '@/components/Radio';
 import Textarea from '@/components/Textarea';
 
-Vue.component('g-button', Button);
-Vue.component('g-checkbox', Checkbox);
-Vue.component('g-icon', Icon);
-Vue.component('g-inline-edit', InlineEdit);
-Vue.component('g-input', Input);
-Vue.component('g-modal', Modal);
-Vue.component('g-radio', Radio);
-Vue.component('g-textarea', Textarea);
+Vue.component('z-button', Button);
+Vue.component('z-checkbox', Checkbox);
+Vue.component('z-icon', Icon);
+Vue.component('z-inline-edit', InlineEdit);
+Vue.component('z-input', Input);
+Vue.component('z-modal', Modal);
+Vue.component('z-radio', Radio);
+Vue.component('z-textarea', Textarea);
 
 jest.mock('lodash/uniqueId', () => () => 'mock-id');

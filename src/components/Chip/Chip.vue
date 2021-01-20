@@ -3,13 +3,10 @@
     class="badge"
     :class="[
       data.staticClass,
-      !!props.license && $options.generateColorClass('license', props.license)
+      props.color && $options.generateColorClass('color', props.license)
     ]"
     :title="!!props.title && props.title"
   >
-    <template v-if="props.license">
-      {{ $options.formatLicenseTypeText(props.license) }}
-    </template>
     <template v-if="props.text">
       {{ props.text }}
     </template>
@@ -17,20 +14,12 @@
 </template>
 
 <script>
-  import { generateColorClass, formatLicenseTypeText } from '@/utils/helpers';
+  import { generateColorClass } from '@/utils/helpers';
 
   export default {
-    name: 'g-chip',
+    name: 'z-chip',
 
     props: {
-      /**
-       * License type to be displayed, e.g. 'Medical', 'Recreational'
-       */
-      license: {
-        type: String,
-        default: '',
-      },
-
       /**
        * Text for title attribute
        */
@@ -48,7 +37,6 @@
       },
     },
 
-    formatLicenseTypeText,
     generateColorClass,
   };
 </script>

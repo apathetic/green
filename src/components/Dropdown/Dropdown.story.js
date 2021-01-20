@@ -7,7 +7,7 @@ storiesOf('Components/-Dropdown', module)
     info: {
       summary: README,
       components: {
-        'g-dropdown': Dropdown,
+        'z-dropdown': Dropdown,
       },
     },
   })
@@ -15,24 +15,24 @@ storiesOf('Components/-Dropdown', module)
     'base component',
     () => ({
       template: `
-        <g-dropdown>
+        <z-dropdown>
           <ul class="pa-3">
             <li>Item 1</li>
             <li>Item 2</li>
           </ul>
-        </g-dropdown>`,
+        </z-dropdown>`,
     }),
   )
 
   .add('with a custom button', () => ({
     template:`
-      <g-dropdown>
+      <z-dropdown>
         <template slot="toggle" slot-scope="{ toggle }">
           <button
             class="button button--primary"
             @click="toggle"
           >
-            Love this <g-icon name="heart" />
+            Love this <z-icon name="heart" />
           </button>
         </template>
 
@@ -43,22 +43,22 @@ storiesOf('Components/-Dropdown', module)
             <li>The other</li>
           </ul>
         </template>
-      </g-dropdown>`,
+      </z-dropdown>`,
   }))
 
 
   .add('with random dropdown contents', () => ({
     template:`
-        <g-dropdown>
+        <z-dropdown>
           <img style="display:block" src="https://placekitten.com/200/160" alt="cat" />
-        </g-dropdown>`,
+        </z-dropdown>`,
   }))
 
 
   .add('with keyable items', () => ({
     // Here, you "should" be able to navigate items in the list with your arrow keys
     template:`
-        <g-dropdown>
+        <z-dropdown>
           <ul>
             <li>
               <a class="button button--secondary dropdown__item" href="#">Edit</a>
@@ -67,19 +67,19 @@ storiesOf('Components/-Dropdown', module)
               <a class="button button--secondary dropdown__item" href="">Delete</a>
             </li>
           </ul>
-        </g-dropdown>`,
+        </z-dropdown>`,
   }))
 
 
   .add('Keep open when content is clicked', () => ({
     template:`
-        <g-dropdown close-manually>
+        <z-dropdown close-manually>
           <template slot-scope="{ dismiss }">
-            <g-button @click="dismiss">close</g-button>
+            <z-button @click="dismiss">close</z-button>
             <p>Here is some content that will not close the Dropdown when clicked.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             <img style="display:block" src="https://placekitten.com/200/160" alt="cat" />
           </template>
-        </g-dropdown>`,
+        </z-dropdown>`,
   }));
 

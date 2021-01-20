@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'g-textarea',
+    name: 'z-textarea',
 
     inheritAttrs: false,
 

@@ -8,8 +8,8 @@
     >
       <slot></slot>
     </transition-group>
-    <g-loading v-if="props.loading" key="loading" />
-    <g-empty-state v-else-if="!props.results.length" key="empty" />
+    <z-loading v-if="props.loading" key="loading" />
+    <z-empty-state v-else-if="!props.results.length" key="empty" />
   </transition-group>
 </template>
 

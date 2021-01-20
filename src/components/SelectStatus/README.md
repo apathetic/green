@@ -4,12 +4,12 @@ Status selector component. Used for displaying/changing statuses of orders, pric
 
 ## Usage
 
-This component is registered globally as `<g-select-status>`. Array of `options` has to be passed as listed in example below.
+This component is registered globally as `<z-select-status>`. Array of `options` has to be passed as listed in example below.
 
 ```html
   <template>
     <div>
-      <g-select-status
+      <z-select-status
         :disabled="true"
         :statusOptions="options"
         v-model="value"

@@ -15,7 +15,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Button },
   template: `
-    <g-button
+    <z-button
       :disabled="disabled"
       :href="href"
       :icon="icon"
@@ -24,9 +24,9 @@ const Template = (args, { argTypes }) => ({
       :secondary="secondary"
       :tertiary="tertiary"
     >
-      <g-icon v-if="icon" name="check"></g-icon>
+      <z-icon v-if="icon" name="check"></z-icon>
       <template v-if="content">{{ content }}</template>
-    </g-button>
+    </z-button>
   `,
 });
 
@@ -94,16 +94,16 @@ export const ButtonGrid = () => ({
       <p>Use the <code>.button-grid</code> wrapper class to create a 2 column, responsive button grid. Used in most views for secondary + primary action buttons</p>
 
       <div class="button-grid">
-        <g-button secondary>Cancel</g-button>
-        <g-button>Save</g-button>
+        <z-button secondary>Cancel</z-button>
+        <z-button>Save</z-button>
       </div>
 
       <p class="mt-3"><code>.button-grid</code> will display as an <code>inline-flex</code> element on desktop, which means you can align it like any other button. In most cases, they are presented right aligned.</p>
 
       <div class="text-right">
         <div class="button-grid">
-          <g-button secondary>Cancel</g-button>
-          <g-button>Save</g-button>
+          <z-button secondary>Cancel</z-button>
+          <z-button>Save</z-button>
         </div>
       </div>
     </div>

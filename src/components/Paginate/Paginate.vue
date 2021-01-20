@@ -5,7 +5,7 @@
         :class="['prev', { 'is-disabled': currentPage === 1 }]"
         @click="prev"
       >
-        <g-icon
+        <z-icon
           class="icon--small"
           name="chevron"
         />
@@ -36,7 +36,7 @@
         :class="['next', { 'is-disabled': currentPage === pages }]"
         @click="next"
       >
-        <g-icon
+        <z-icon
           class="icon--small rotate-180"
           name="chevron"
         />
@@ -47,7 +47,7 @@
 
 <script>
   export default {
-    name: 'g-paginate',
+    name: 'z-paginate',
 
     props: {
       currentPage: {

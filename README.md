@@ -1,11 +1,11 @@
-# Green-UI
+# zigzag-ui
 
-![npm (tag)](https://img.shields.io/npm/v/@apathetic/green-ui/latest?color=%230072f0)
+![npm (tag)](https://img.shields.io/npm/v/@apathetic/zigzag-ui/latest?color=%230072f0)
 
 > A custom Vue component library.
 
 
-The `Green-UI` framework best operates as a plugin, where components, directives, theming and storage options may be dynamically configured per environment.
+The `zigzag-ui` framework best operates as a plugin, where components, directives, theming and storage options may be dynamically configured per environment.
 
 ## Getting Started
 
@@ -35,15 +35,15 @@ const options = {
 A sample configuration might look something like:
 
 ```javascript
-// plugins/green-ui/index.js
+// plugins/zigzag-ui/index.js
 
-import '@apatheticwes/green-ui/dist/green.min.css'; // optional. You may prefer to bundle this elsewhere
+import '@apatheticwes/zigzag-ui/dist/zigzag.min.css'; // optional. You may prefer to bundle this elsewhere
 import Vue from 'vue';
-import GreenUI, { Button, Checkbox } from '@apatheticwes/green-ui';
+import ZigZagUI, { Button, Checkbox } from '@apatheticwes/zigzag-ui';
 import i18n, { locale } from 'path/to/i18n';
 import theme from 'path/to/themes/dark.json';
 
-Vue.use(GreenUI, {
+Vue.use(ZigZagUI, {
   theme,
   i18n: {
     locale,
@@ -55,17 +55,17 @@ Vue.use(GreenUI, {
   },
 });
 
-export default greenUI;
+export default zigzagUI;
 ```
 This example will load the core CSS stylesheet, i18n options, a dark theme, and the `Button` and `Checkbox` components.
 
 Then, in your app's setup, simply:
 ```javascript
-import greenUI from '@/plugins/green-ui';
+import zigzagUI from '@/plugins/zigzag-ui';
 
 // ...
 
-Vue.use(greenUI);
+Vue.use(zigzagUI);
 ```
 
 ---

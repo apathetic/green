@@ -14,14 +14,14 @@ echo ''
 
 echo 'Minifying JS...'
 # We instruct terser to preserve safe types (i.e. `Element`, etc) when mangling top level names
-terser dist/green-ui.common.js \
+terser dist/zigzag-ui.common.js \
        --compress typeofs=false \
        --mangle reserved=['Element','HTMLElement','SVGElement'] \
        --toplevel \
        --keep-classnames \
        --comments "/^!/" \
-       --source-map "content=dist/green-ui.common.js.map,includeSources,url=green-ui.common.min.js.map" \
-       --output "dist/green-ui.common.min.js"
+       --source-map "content=dist/zigzag-ui.common.js.map,includeSources,url=zigzag-ui.common.min.js.map" \
+       --output "dist/zigzag-ui.common.min.js"
 echo 'Done.'
 echo ''
 
@@ -33,10 +33,10 @@ node-sass --output-style expanded \
           --precision 6 \
           --quiet \
           src/styles/main.scss \
-          dist/green-ui.css
+          dist/zigzag-ui.css
 postcss --config ./postcss.config.js \
-        --output dist/green-ui.min.css \
-        dist/green-ui.css
+        --output dist/zigzag-ui.min.css \
+        dist/zigzag-ui.css
 echo 'Done.'
 echo ''
 

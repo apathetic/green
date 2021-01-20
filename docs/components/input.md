@@ -27,9 +27,9 @@ Text inputs enable the user to input and interact with content and data. This co
 A standard text input should be used used for short form entries.
 
 <template>
-  <g-input placeholder="Enter text here"/>
+  <z-input placeholder="Enter text here"/>
 </template>
 
 ``` html
-  <g-input placeholder="Enter text here"/>
+  <z-input placeholder="Enter text here"/>
 ```

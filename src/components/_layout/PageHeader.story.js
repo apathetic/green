@@ -12,8 +12,8 @@ storiesOf('Layout/PageHeader', module)
     components: { PageHeader },
     template: `
       <PageHeader title="Page title" description="Modernipsum dolor sit amet nouveau realisme divisionism.">
-        <g-button slot="secondary-action" secondary>Cancel</g-button>
-        <g-button slot="primary-action">Save</g-button>
+        <z-button slot="secondary-action" secondary>Cancel</z-button>
+        <z-button slot="primary-action">Save</z-button>
       </PageHeader>
     `,
   }))
@@ -21,8 +21,8 @@ storiesOf('Layout/PageHeader', module)
     components: { PageHeader },
     template: `
       <PageHeader title="Page title">
-        <g-button slot="secondary-action" secondary>Cancel</g-button>
-        <g-button slot="primary-action">Save</g-button>
+        <z-button slot="secondary-action" secondary>Cancel</z-button>
+        <z-button slot="primary-action">Save</z-button>
       </PageHeader>
     `,
   }));

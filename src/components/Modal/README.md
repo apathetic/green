@@ -4,19 +4,19 @@ Modal overlay component. Used for popup content & dialogs.
 
 ## Usage
 
-This component is registered globally as `<g-modal>`.
+This component is registered globally as `<z-modal>`.
 
 ```html
   <template>
     <div>
-      <g-button @click="show">Open</g-button>
-      <g-modal @dismiss="dismiss" :open="open" title="Modal Header">
+      <z-button @click="show">Open</z-button>
+      <z-modal @dismiss="dismiss" :open="open" title="Modal Header">
         Modal content
         <template slot="actions">
-          <g-button secondary @click="dismiss">Cancel</g-button>
-          <g-button @click="submit">Continue</g-button>
+          <z-button secondary @click="dismiss">Cancel</z-button>
+          <z-button @click="submit">Continue</z-button>
         </template>
-      </g-modal>
+      </z-modal>
     </div>
   </template>
 

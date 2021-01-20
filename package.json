@@ -1,21 +1,21 @@
 {
-  "name": "@apatheticwes/green-ui",
+  "name": "@apatheticwes/zigzag-ui",
   "version": "0.10.5",
   "description": "A vue component library and utility library",
-  "homepage": "https://github.com/apathetic/green-ui#readme",
+  "homepage": "https://github.com/apathetic/zigzag-ui#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apathetic/green-ui.git"
+    "url": "git+https://github.com/apathetic/zigzag-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/apathetic/green-ui/issues"
+    "url": "https://github.com/apathetic/zigzag-ui/issues"
   },
   "license": "MIT",
   "types": "types/index.d.ts",
-  "main": "dist/green-ui.common.js",
+  "main": "dist/zigzag-ui.common.js",
   "module": "lib/index.js",
   "source": "src/index.js",
-  "style": "dist/green-ui.min.css",
+  "style": "dist/zigzag-ui.min.css",
   "sass": "src/styles/main.scss",
   "files": [
     "dist",

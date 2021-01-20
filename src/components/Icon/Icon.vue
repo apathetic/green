@@ -18,7 +18,7 @@
   import uniqueId from 'lodash/uniqueId';
 
   export default {
-    name: 'g-icon',
+    name: 'z-icon',
     props: {
       id: {
         type: String,

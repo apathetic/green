@@ -16,7 +16,7 @@
         :class="$style['button']"
         @click="toggle"
       >
-        <g-icon name="ellipse" />
+        <z-icon name="ellipse" />
       </button>
     </slot>
 
@@ -42,7 +42,7 @@
   import { calculateElementOverflow, getMountPoint } from '@/utils/helpers';
 
   export default {
-    name: 'g-dropdown',
+    name: 'z-dropdown',
 
     directives: { clickoutside },
 

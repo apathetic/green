@@ -7,13 +7,13 @@ storiesOf('Components/-Inline-Edit', module)
     info: {
       summary: README,
       components: {
-        'g-inline-edit': InlineEdit,
+        'z-inline-edit': InlineEdit,
       },
     },
   })
 
   .add('with initial value', () => ({
-    template: '<g-inline-edit v-model="value"></g-inline-edit>',
+    template: '<z-inline-edit v-model="value"></z-inline-edit>',
     data() {
       return {
         value: 'Hello Friend',
@@ -22,7 +22,7 @@ storiesOf('Components/-Inline-Edit', module)
   }))
 
   .add('with new and old localized values provided', () => ({
-    template: '<g-inline-edit v-model="value" :old-value="25.5" type="number"></g-inline-edit>',
+    template: '<z-inline-edit v-model="value" :old-value="25.5" type="number"></z-inline-edit>',
     data() {
       return {
         value: 20.5,
@@ -31,7 +31,7 @@ storiesOf('Components/-Inline-Edit', module)
   }))
 
   .add('with currency format', () => ({
-    template: '<g-inline-edit v-model="value" format="currency" type="number"></g-inline-edit>',
+    template: '<z-inline-edit v-model="value" format="currency" type="number"></z-inline-edit>',
     data() {
       return {
         value: '20',
@@ -40,7 +40,7 @@ storiesOf('Components/-Inline-Edit', module)
   }))
 
   .add('with percent format', () => ({
-    template: '<g-inline-edit v-model="value" format="percent" type="number"></g-inline-edit>',
+    template: '<z-inline-edit v-model="value" format="percent" type="number"></z-inline-edit>',
     data() {
       return {
         value: '20',
@@ -51,8 +51,8 @@ storiesOf('Components/-Inline-Edit', module)
   .add('disabled', () => ({
     template: `
       <div>
-        <g-inline-edit v-model="value" :old-value="oldValue" format="currency" type="number" :disabled="true"></g-inline-edit>
-        <g-inline-edit v-model="value" format="currency" type="number" :disabled="true"></g-inline-edit>
+        <z-inline-edit v-model="value" :old-value="oldValue" format="currency" type="number" :disabled="true"></z-inline-edit>
+        <z-inline-edit v-model="value" format="currency" type="number" :disabled="true"></z-inline-edit>
       </div>
     `,
     data() {

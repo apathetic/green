@@ -9,12 +9,12 @@ Supports currency & percentage formatting out of the box.
 
 ## Usage
 
-This component is registered globally as `<g-inline-edit>`.
+This component is registered globally as `<z-inline-edit>`.
 
 ```
   {
     template: \`
-      <g-inline-edit v-model="value"></g-inline-edit>
+      <z-inline-edit v-model="value"></z-inline-edit>
     \`,
     data() {
       return {
@@ -31,7 +31,7 @@ You may use the `format` prop to display the value as either currecy or percenta
 ```
   {
     template: \`
-      <g-inline-edit v-model="value" format="currency" type="number"></g-inline-edit>
+      <z-inline-edit v-model="value" format="currency" type="number"></z-inline-edit>
     \`,
     data() {
       return {
@@ -70,7 +70,7 @@ If you want to have the "original value" appear only once an edited value is ent
 ```
   {
     template: \`
-      <g-inline-edit v-model="value" :old-value="25.00" type="number"></g-inline-edit>
+      <z-inline-edit v-model="value" :old-value="25.00" type="number"></z-inline-edit>
     \`,
     data() {
       return {

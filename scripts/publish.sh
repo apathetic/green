@@ -41,7 +41,7 @@ echo 'Bumping version...'
 git checkout -b ${TEMP_BRANCH} --quiet # create a temporary branch for this
 npm version ${SEMVER}
 UI_VERSION=$(node -p "require('./package.json').version")
-printf "GreenUI --> \e[1;5;32m${UI_VERSION}\e[0m\n"
+printf "ZigZagUI --> \e[1;5;32m${UI_VERSION}\e[0m\n"
 echo 'Done.'
 echo ''
 
@@ -66,7 +66,7 @@ echo ''
 read -p 'Confirm Y/N ? ' -n 1 -r
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  echo "Okay. Publishing GreenUI version ${UI_VERSION}"
+  echo "Okay. Publishing ZigZagUI version ${UI_VERSION}"
   echo ''
   npm publish --access public # bombs away!
   git push -u origin ${TEMP_BRANCH} # create the version bump commit ?

@@ -35,7 +35,7 @@ The select component is a type of input where a user can choose one or multiple 
 A single select should be used when all of the options within the list are mutually exclusive.
 
 <template>
-  <g-select
+  <z-select
     single
     placeholder="Select one value"
     :options="[1,2,3]"
@@ -43,7 +43,7 @@ A single select should be used when all of the options within the list are mutua
 </template>
 
 ``` html
-  <g-select
+  <z-select
     single
     placeholder="Select one value"
     :options="[1,2,3]"
@@ -55,14 +55,14 @@ A single select should be used when all of the options within the list are mutua
 A multi select should be used when the options within the list can be mutually inclusive.
 
 <template>
-  <g-select
+  <z-select
     placeholder="Select multiple values"
     :options="[1,2,3]"
   />
 </template>
 
 ``` html
-<g-select
+<z-select
   placeholder="Select multiple values"
   :options="[1,2,3]"
 />

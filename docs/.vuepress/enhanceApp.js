@@ -1,10 +1,22 @@
-import Button from '@/components/Button';
-import Checkbox from '@/components/Checkbox';
-//import Dropdown from '@/components/Dropdown';
-import Icon from '@/components/Icon';
-import Input from '@/components/Input';
-import Select from '@/components/Select';
 import './styles/index.scss';
+import {
+  Badge,
+  Button,
+  Checkbox,
+  Chip,
+  Dropdown,
+  EmptyState,
+  Icon,
+  Input,
+  Loading,
+  Modal,
+  Paginate,
+  Radio,
+  Select,
+  SelectStatus,
+  Textarea,
+} from '@/components';
+
 
 
 export default ({
@@ -13,10 +25,16 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  Vue.component('g-button', Button);
-  Vue.component('g-checkbox', Checkbox);
-  //Vue.component('g-dropdown', Dropdown);
-  Vue.component('g-icon', Icon);
-  Vue.component('g-input', Input);
-  Vue.component('g-select', Select);
+  Vue.component('z-badge', Badge);
+  Vue.component('z-button', Button);
+  Vue.component('z-checkbox', Checkbox);
+  Vue.component('z-chip', Chip);
+  Vue.component('z-dropdown', Dropdown);
+  Vue.component('z-emptystate', EmptyState);
+  Vue.component('z-icon', Icon);
+  Vue.component('z-input', Input);
+  Vue.component('z-loading', Loading);
+  Vue.component('z-modal', Modal);
+  Vue.component('z-paginate', Paginate);
+  Vue.component('z-select', Select);
 }

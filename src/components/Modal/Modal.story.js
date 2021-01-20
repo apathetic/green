@@ -30,10 +30,10 @@ const LongContent = {
 const FormGrid = {
   template: `
     <div class="grid">
-      <g-input label="Input 1" class="span-6" />
-      <g-input label="Input 2" class="span-6" />
-      <g-select label="Input 3" class="span-6" />
-      <g-input label="Input 4" class="span-6" />
+      <z-input label="Input 1" class="span-6" />
+      <z-input label="Input 2" class="span-6" />
+      <z-select label="Input 3" class="span-6" />
+      <z-input label="Input 4" class="span-6" />
     </div class="grid">
   `,
 };
@@ -63,7 +63,7 @@ storiesOf('Components/-Modal', module)
     info: {
       summary: README,
       components: {
-        'g-modal': Modal,
+        'z-modal': Modal,
       },
     },
   })
@@ -71,11 +71,11 @@ storiesOf('Components/-Modal', module)
     mixins: [ ModalBase ],
     template: `
       <div>
-        <g-button @click="open = true">Open</g-button>
+        <z-button @click="open = true">Open</z-button>
 
-        <g-modal @dismiss="dismiss" :open="open" title="Modal Header">
+        <z-modal @dismiss="dismiss" :open="open" title="Modal Header">
           <ShortContent />
-        </g-modal>
+        </z-modal>
       </div>
     `,
   }))
@@ -84,11 +84,11 @@ storiesOf('Components/-Modal', module)
     template: `
       <div>
         <p>As a convenience, you can use v-model to bind the open property automatically.</p>
-        <g-button @click="open = true">Open</g-button>
+        <z-button @click="open = true">Open</z-button>
 
-        <g-modal v-model="open" title="Modal Header">
+        <z-modal v-model="open" title="Modal Header">
           <ShortContent />
-        </g-modal>
+        </z-modal>
       </div>
     `,
   }))
@@ -96,16 +96,16 @@ storiesOf('Components/-Modal', module)
     mixins: [ ModalBase ],
     template: `
     <div>
-      <g-button @click="open = true">Open</g-button>
+      <z-button @click="open = true">Open</z-button>
 
-      <g-modal v-model="open" title="Modal Header">
+      <z-modal v-model="open" title="Modal Header">
         <ShortContent />
 
         <template slot="actions">
-          <g-button secondary @click="dismiss">Cancel</g-button>
-          <g-button @click="submit">Continue</g-button>
+          <z-button secondary @click="dismiss">Cancel</z-button>
+          <z-button @click="submit">Continue</z-button>
         </template>
-      </g-modal>
+      </z-modal>
     </div>
     `,
   }))
@@ -113,16 +113,16 @@ storiesOf('Components/-Modal', module)
     mixins: [ ModalBase ],
     template: `
       <div>
-        <g-button @click="open = true">Open</g-button>
+        <z-button @click="open = true">Open</z-button>
 
-        <g-modal @dismiss="dismiss" :open="open" title="Modal Header">
+        <z-modal @dismiss="dismiss" :open="open" title="Modal Header">
           <LongContent />
 
           <template slot="actions">
-            <g-button secondary @click="dismiss">Cancel</g-button>
-            <g-button @click="submit">Continue</g-button>
+            <z-button secondary @click="dismiss">Cancel</z-button>
+            <z-button @click="submit">Continue</z-button>
           </template>
-        </g-modal>
+        </z-modal>
       </div>
     `,
   }))
@@ -130,26 +130,26 @@ storiesOf('Components/-Modal', module)
     mixins: [ ModalBase ],
     template: `
       <div>
-        <g-button @click="open = true">Open</g-button>
+        <z-button @click="open = true">Open</z-button>
 
-        <g-modal v-model="open" title="Modal Header">
+        <z-modal v-model="open" title="Modal Header">
           <FormGrid />
 
           <template slot="footer">
             <div class="grid">
               <div class="span-4">
-                <a href="#"><g-icon name="add" />Custom Action</a>
+                <a href="#"><z-icon name="add" />Custom Action</a>
               </div>
 
               <div class="span-8 text-right">
                 <div class="button-grid">
-                  <g-button secondary @click="dismiss">Cancel</g-button>
-                  <g-button @click="submit">Continue</g-button>
+                  <z-button secondary @click="dismiss">Cancel</z-button>
+                  <z-button @click="submit">Continue</z-button>
                 </div>
               </div>
             </div>
           </template>
-        </g-modal>
+        </z-modal>
       </div>
     `,
   }))
@@ -158,18 +158,18 @@ storiesOf('Components/-Modal', module)
     template: `
       <div>
         <p>Navigate using the keyboard, when open the focus will be moved to the modal (instead of this input).</p>
-        <g-button @click="open = true">Open</g-button>
+        <z-button @click="open = true">Open</z-button>
 
-        <g-input label="Input" />
+        <z-input label="Input" />
 
-        <g-modal @dismiss="dismiss" :open="open" title="Modal Header">
+        <z-modal @dismiss="dismiss" :open="open" title="Modal Header">
           <ShortContent />
 
           <template slot="actions">
-            <g-button secondary @click="dismiss">Cancel</g-button>
-            <g-button @click="submit">Continue</g-button>
+            <z-button secondary @click="dismiss">Cancel</z-button>
+            <z-button @click="submit">Continue</z-button>
           </template>
-        </g-modal>
+        </z-modal>
       </div>
     `,
     data() {

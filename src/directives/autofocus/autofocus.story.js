@@ -19,16 +19,16 @@ storiesOf('Directives/v-autofocus', module)
     template: `
       <div class="grid">
         <div class="span-3">
-          <g-button @click="one = !one">Toggle input</g-button>
-          <g-input class="mt-2" v-autofocus v-if="one" />
+          <z-button @click="one = !one">Toggle input</z-button>
+          <z-input class="mt-2" v-autofocus v-if="one" />
         </div>
         <div class="span-3">
-          <g-button @click="two = !two">Toggle textarea</g-button>
-          <g-textarea class="mt-2" v-autofocus v-if="two" />
+          <z-button @click="two = !two">Toggle textarea</z-button>
+          <z-textarea class="mt-2" v-autofocus v-if="two" />
         </div>
         <div class="span-3">
-          <g-button @click="three = !three">Toggle select</g-button>
-          <g-select class="mt-2" v-autofocus v-if="three" />
+          <z-button @click="three = !three">Toggle select</z-button>
+          <z-select class="mt-2" v-autofocus v-if="three" />
         </div>
       </div>
     `,

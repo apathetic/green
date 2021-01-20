@@ -37,24 +37,24 @@ Dropdowns are used to display a number of action buttons, or a list of options, 
 
 <template>
   <div>
-    <g-dropdown>
+    <z-dropdown>
       <ul class="pa-3">
         <li>This</li>
         <li>That</li>
         <li>The other</li>
       </ul>
-    </g-dropdown>
+    </z-dropdown>
   </div>
 </template>
 
 ``` html
-  <g-dropdown>
+  <z-dropdown>
     <ul class="pa-3">
       <li>This</li>
       <li>That</li>
       <li>The other</li>
     </ul>
-  </g-dropdown>
+  </z-dropdown>
 ```
 
 ## Custom Toggle Dropdown
@@ -62,7 +62,7 @@ Dropdowns are used to display a number of action buttons, or a list of options, 
 Dropdowns are used to display a number of action buttons, or a list of options, within a single container.
 
 <template>
-  <g-dropdown>
+  <z-dropdown>
     <template slot="toggle" slot-scope="{ toggle }">
       <button
         class="button button--primary"
@@ -77,11 +77,11 @@ Dropdowns are used to display a number of action buttons, or a list of options, 
       <li>That</li>
       <li>The other</li>
     </ul>
-  </g-dropdown>
+  </z-dropdown>
 </template>
 
 ``` html
-  <g-dropdown>
+  <z-dropdown>
     <template slot="toggle" slot-scope="{ toggle }">
       <button
         class="button button--primary"
@@ -96,5 +96,5 @@ Dropdowns are used to display a number of action buttons, or a list of options, 
       <li>That</li>
       <li>The other</li>
     </ul>
-  </g-dropdown>
+  </z-dropdown>
 ```

@@ -45,23 +45,23 @@ export const Example = () => ({
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed urna sit amet purus porttitor elementum a eget ex. Morbi commodo, erat in imperdiet vulputate, est tellus scelerisque odio, in consectetur justo orci in purus. In venenatis, elit nec porta placerat, sapien dui malesuada lectus, non iaculis dolor quam id augue.</p>
 
           <div>
-            <g-button v-sticky="useSticky.buttonA" style="z-index: 11;">
+            <z-button v-sticky="useSticky.buttonA" style="z-index: 11;">
               Button A
-            </g-button>
+            </z-button>
           </div>
 
           <div style="margin-top: 16px;">
-            <g-button v-sticky style="z-index: 11;">
+            <z-button v-sticky style="z-index: 11;">
               Button B
-            </g-button>
+            </z-button>
 
-            <g-button v-sticky="useSticky.buttonC" style="z-index: 11;">
+            <z-button v-sticky="useSticky.buttonC" style="z-index: 11;">
               Button C
-            </g-button>
+            </z-button>
 
-            <g-button>
+            <z-button>
               Button D
-            </g-button>
+            </z-button>
           </div>
 
           <p>Curabitur posuere odio non justo rhoncus, non lacinia orci vulputate. Aliquam placerat turpis eget nisi malesuada aliquam. Sed eleifend risus ligula, ut semper eros fringilla id. Praesent lobortis viverra lectus tempus lobortis. Pellentesque libero nunc, malesuada et scelerisque ut, tempor quis purus. Praesent elementum leo at orci rhoncus varius. Aenean quis mauris malesuada, venenatis turpis sed, euismod ligula.</p>

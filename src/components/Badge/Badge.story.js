@@ -13,20 +13,20 @@ export default {
 
 export const OverText = () => ({
   props: ['content'],
-  components: { 'g-badge': Badge },
+  components: { 'z-badge': Badge },
   template: `
-    <span>Hello World <g-badge :content="content" /></span>
+    <span>Hello World <z-badge :content="content" /></span>
   `,
 });
 
 
 export const OverButton = () => ({
   props: ['content'],
-  components: { 'g-badge': Badge },
+  components: { 'z-badge': Badge },
   template: `
-    <g-button secondary>
+    <z-button secondary>
       Hello World
-      <g-badge :content="content" />
-    </g-button>
+      <z-badge :content="content" />
+    </z-button>
   `,
 });

@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'g-radio',
+    name: 'z-radio',
     model: {
       prop: 'checked',
       event: 'change',

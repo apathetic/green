@@ -23,7 +23,7 @@
 
 <script>
   export default {
-    name: 'g-button',
+    name: 'z-button',
 
     props: {
       /**
@@ -66,7 +66,7 @@
        */
       dataTest: {
         type: String,
-        default: 'g-button',
+        default: 'z-button',
       },
     },
 

@@ -7,7 +7,7 @@ import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs'; // literally just for quill. TODO update quill to ^2.0, kill this
 import resolve from '@rollup/plugin-node-resolve';
 
-const name = 'green-ui';
+const name = 'zigzag-ui';
 const configs = require('./configs');
 const bannerComment = require('./banner');
 const src = path.resolve(__dirname, '../src');

@@ -8,65 +8,65 @@ storiesOf('Components/-Input', module)
     info: {
       summary: README,
       components: {
-        'g-input': Input,
+        'z-input': Input,
       },
     },
   })
 
   .add('base component', () => ({
-    template: '<g-input value="input value"></g-input>',
+    template: '<z-input value="input value"></z-input>',
   }))
 
   .add('with a label', () => ({
-    template:'<g-input label="Hello Label"></g-input>',
+    template:'<z-input label="Hello Label"></z-input>',
   }))
 
   .add('with a placeholder', () => ({
-    template:'<g-input placeholder="Enter your credit card and SSN"></g-input>',
+    template:'<z-input placeholder="Enter your credit card and SSN"></z-input>',
   }))
 
   .add('with hint text', () => ({
-    template: '<g-input hintText="Try entering some text here"></g-input>',
+    template: '<z-input hintText="Try entering some text here"></z-input>',
   }))
 
   .add('label, placeholder, and hint', () => ({
-    template: '<g-input label="Customer Info" placeholder="something about a customer" hintText="Try entering some text here"></g-input>',
+    template: '<z-input label="Customer Info" placeholder="something about a customer" hintText="Try entering some text here"></z-input>',
   }))
 
   .add('with a default value', () => ({
-    template: '<g-input value="A default value"></g-input>',
+    template: '<z-input value="A default value"></z-input>',
   }))
 
   .add('with error text', () => ({
-    template: '<g-input errorText="There is error"></g-input>',
+    template: '<z-input errorText="There is error"></z-input>',
   }))
 
   .add('is disabled', () => ({
-    template: '<g-input :disabled="true"></g-input>',
+    template: '<z-input :disabled="true"></z-input>',
   }))
 
   .add('is readonly', () => ({
-    template: '<g-input :readonly="true"></g-input>',
+    template: '<z-input :readonly="true"></z-input>',
   }))
 
   .add('with (localized) number formatting', () => ({
-    template: '<g-input type="number"></g-input>',
+    template: '<z-input type="number"></z-input>',
   }))
 
   .add('with "children"', () => ({
-    template: '<g-input>this should not render</g-input>',
+    template: '<z-input>this should not render</z-input>',
   }))
 
   // what... what other types could it be, in this context?
   .add('as type text', () => ({
-    template: '<g-input type="text"></g-input>',
+    template: '<z-input type="text"></z-input>',
   }))
 
   .add('with prepended symbol', () => ({
-    template: '<g-input type="text"><template slot="prepend">$</template></g-input>',
+    template: '<z-input type="text"><template slot="prepend">$</template></z-input>',
   }))
 
   .add('with appended symbol', () => ({
-    template: '<g-input type="text"><template slot="append">lb</template></g-input>',
+    template: '<z-input type="text"><template slot="append">lb</template></z-input>',
   }));
 

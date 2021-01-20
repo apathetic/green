@@ -1,10 +1,10 @@
 ---
 title: "CSS utilities"
-description: "Utility CSS for the GreenUI library"
+description: "Utility CSS for the ZigZagUI library"
 items:
 - title: List
   link: list.html
-  details: All icons in the GreenUI design system.
+  details: All icons in the ZigZagUI design system.
 - title: Overview
   link: overview.html
   details: Creating, optimizing, updating

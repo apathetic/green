@@ -1,14 +1,13 @@
 ---
 home: true
-heroImage: https://png.pngtree.com/thumb_back/fw800/background/20190925/pngtree-blue-colour-background-image_314361.jpg
-heroText: GreenUI Design System
-tagline: All the things
+heroText: ZigZagUI
+tagline: POC Vue Component library
 actionText: Get Started →
 actionLink: developer/overview
 items:
 - title: Components
   link: components/
-  details: Components in the GreenUI Design System.
+  details: Components in the ZigZagUI Design System.
 
 - title: Patterns
   link: patterns/

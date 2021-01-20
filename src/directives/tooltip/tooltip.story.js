@@ -16,23 +16,23 @@ storiesOf('Directives/v-tooltip', module)
     ...story,
     template: `
       <div class="grid align-bottom">
-        <g-input label="text" class="span-3" v-model="text" />
+        <z-input label="text" class="span-3" v-model="text" />
 
-        <g-button v-tooltip.top="text">
+        <z-button v-tooltip.top="text">
           Top
-        </g-button>
+        </z-button>
 
-        <g-button v-tooltip.right="text">
+        <z-button v-tooltip.right="text">
           Right
-        </g-button>
+        </z-button>
 
-        <g-button v-tooltip.bottom="text">
+        <z-button v-tooltip.bottom="text">
           Bottom
-        </g-button>
+        </z-button>
 
-        <g-button v-tooltip.left="text">
+        <z-button v-tooltip.left="text">
           Left
-        </g-button>
+        </z-button>
       </div>
     `,
   }))
@@ -41,20 +41,20 @@ storiesOf('Directives/v-tooltip', module)
     template: `
       <div class="grid align-middle">
         <div>
-          <g-button icon secondary href="#" v-tooltip.right="'I’m a secondary icon button'">
-            <g-icon name="seedtosale" />
-          </g-button>
+          <z-button icon secondary href="#" v-tooltip.right="'I’m a secondary icon button'">
+            <z-icon name="seedtosale" />
+          </z-button>
         </div>
 
         <div>
           <a href="#" v-tooltip.top="'I’m a regular link with a longer label'">
-            <g-icon name="edit" />
+            <z-icon name="edit" />
           </a>
         </div>
 
         <div>
           <span v-tooltip.bottom="'I’m just a simple span element with a tooltip'">
-            <g-icon name="ship" />
+            <z-icon name="ship" />
           </span>
         </div>
       </div>

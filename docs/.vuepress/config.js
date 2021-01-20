@@ -2,7 +2,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  title: 'Design Docs',
+  title: 'ZigZagUI',
   description: 'Design patterns, CSS / JS, Accessibility, Icons',
   head: [
     ["link", { rel: "icon", href: "/images/favicon.png" }],
@@ -17,6 +17,7 @@ module.exports = {
         children: [
           'components/button',
           'components/checkbox',
+          'components/chip',
           //'components/dropdown',
           'components/input',
           'components/select',

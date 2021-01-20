@@ -5,16 +5,16 @@
       v-model="filterValues[filterIndex]"
       v-bind="filter.attributes"
       class="span-3"
-      :class="filter.type === 'g-checkbox' && 'flex align-bottom'"
+      :class="filter.type === 'z-checkbox' && 'flex align-bottom'"
       :key="`${filterIndex} ${reset}`"
       :label="filter.label"
       :selected="filterValues[filterIndex]"
       :is="filter.type"
     />
     <div class="flex align-right align-bottom button-grid span-3">
-      <g-button secondary @click="resetFilters">
+      <z-button secondary @click="resetFilters">
         {{ $t('common.reset_filters') }}
-      </g-button>
+      </z-button>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
 <script>
   import { get, set } from '@/storage';
   export default {
-    name: 'g-filters',
+    name: 'z-filters',
 
     props: {
       schema: {
@@ -52,7 +52,7 @@
        */
       getDefaultFilters() {
         return this.schema.reduce((acc, item, key) => {
-          if (item.type === 'g-checkbox') {
+          if (item.type === 'z-checkbox') {
             acc[key] = item.attributes.checked || false;
           }
 

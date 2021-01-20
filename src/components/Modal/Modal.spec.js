@@ -2,11 +2,11 @@ import { mount, shallowMount } from '@vue/test-utils';
 import Modal from '@/components/Modal';
 
 const ModalWithToggle = {
-  components: { 'g-modal': Modal },
+  components: { 'z-modal': Modal },
   template: `
     <div>
       <button></button>
-      <g-modal />
+      <z-modal />
     </div>
   `,
 };

@@ -1,5 +1,5 @@
 <template>
-  <div :class="['input', 'g-select', {'has-error': error}]" data-test="g-select">
+  <div :class="['input', 'z-select', {'has-error': error}]" data-test="g-select">
     <label v-if="label" class="input-label">{{ label }}</label>
 
     <!-- -SELECT -->
@@ -9,7 +9,7 @@
       :aria-controls="'listbox-'+_uid"
       :aria-expanded="isActive.toString()"
       :aria-label="placeholder"
-      :class="[$style['g-select'], {'is-active': isActive}, {'is-single': single}, {'is-disabled': disabled}]"
+      :class="[$style['z-select'], {'is-active': isActive}, {'is-single': single}, {'is-disabled': disabled}]"
       @keydown="onKeyDown"
       @keyup.esc="dismiss"
     >
@@ -57,7 +57,7 @@
                 @keypress.enter.prevent="remove(option)"
                 @mousedown.prevent.stop="remove(option)"
               >
-                <g-icon name="close" icon="close" class="icon--small" />
+                <z-icon name="close" icon="close" class="icon--small" />
               </button>
             </slot>
           </li>
@@ -67,7 +67,7 @@
         <span :class="[$style['total'], {'hidden': !isIntersecting || isActive || internalValue.length < 2}]">...{{ internalValue.length }} selected</span>
 
         <!-- TOGGLE -->
-        <g-icon
+        <z-icon
           v-if="icon"
           :class="$style.icon"
           :name="icon"
@@ -94,7 +94,7 @@
                 type="text"
                 :class="$style['search']"
               />
-              <g-icon name="search" class="color-light" />
+              <z-icon name="search" class="color-light" />
             </div>
 
             <!-- OPTIONS -->
@@ -111,7 +111,7 @@
                   {{ option[displayBy] || option }}
                 </slot>
 
-                <g-icon v-if="isSelected(option)" name="check" class="color-blue ml-auto" />
+                <z-icon v-if="isSelected(option)" name="check" class="color-blue ml-auto" />
               </li>
               <li v-show="!filteredOptions.length" class="ma-1 pa-1 cursor-default">No options</li>
             </ul>
@@ -136,7 +136,7 @@
   import { KEY_CODES } from '@/constants';
 
   export default {
-    name: 'g-select',
+    name: 'z-select',
 
     inheritAttrs: false,
     directives: { clickoutside },

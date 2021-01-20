@@ -18,7 +18,7 @@ export const Single = () => ({
   },
   template: `
     <div>
-      <g-checkbox label="Single checkbox" id="checkbox-1" name="checkbox-1" v-model="checked" :disabled="disabled" />
+      <z-checkbox label="Single checkbox" id="checkbox-1" name="checkbox-1" v-model="checked" :disabled="disabled" />
       <br/> Checked: {{ checked }}
     </div>
   `,
@@ -33,9 +33,9 @@ export const Multiple = () => ({
   },
   template: `
     <div>
-      <g-checkbox label="Checkbox 1" id="checkbox-1" name="checkbox-1" value="1" v-model="checked" :disabled="disabled" />
-      <g-checkbox label="Checkbox 2" id="checkbox-2" name="checkbox-2" value="2" v-model="checked" :disabled="disabled" />
-      <g-checkbox label="Checkbox 3" id="checkbox-3" name="checkbox-3" value="3" v-model="checked" :disabled="disabled" />
+      <z-checkbox label="Checkbox 1" id="checkbox-1" name="checkbox-1" value="1" v-model="checked" :disabled="disabled" />
+      <z-checkbox label="Checkbox 2" id="checkbox-2" name="checkbox-2" value="2" v-model="checked" :disabled="disabled" />
+      <z-checkbox label="Checkbox 3" id="checkbox-3" name="checkbox-3" value="3" v-model="checked" :disabled="disabled" />
       <br/> Checked: {{ checked }}
     </div>
   `,
@@ -45,7 +45,7 @@ export const Indeterminate = () => ({
   props: ['disabled'],
   template: `
     <div>
-      <g-checkbox abel="Indeterminate checkbox" id="checkbox-1" name="checkbox-1" :indeterminate="true" :disabled="disabled" />
+      <z-checkbox abel="Indeterminate checkbox" id="checkbox-1" name="checkbox-1" :indeterminate="true" :disabled="disabled" />
     </div>
   `,
 });
@@ -56,7 +56,7 @@ export const Standalone = () => ({
       <div class="item-list mt-2">
         <div class="item-list__header header-row grid">
           <span class="title span-4 align-middle flex">
-            <g-checkbox id="checkbox-all" name="checkbox-all" value="all" />
+            <z-checkbox id="checkbox-all" name="checkbox-all" value="all" />
             Title
           </span>
           <span class="category span-4 align-middle flex">Category</span>
@@ -65,7 +65,7 @@ export const Standalone = () => ({
         <div class="item-list__content">
           <div class="item grid" style="padding: 6px 12px; border-bottom: 1px solid #c5c9d4;">
             <div class="title span-4 align-middle flex">
-              <g-checkbox id="checkbox-1" name="checkbox-1" value="1" />
+              <z-checkbox id="checkbox-1" name="checkbox-1" value="1" />
               <div>
                 <h4>
                   Test name 1
@@ -80,7 +80,7 @@ export const Standalone = () => ({
           </div>
           <div class="item grid" style="padding: 6px 12px;">
             <div class="title span-4 align-middle flex">
-              <g-checkbox id="checkbox-2" name="checkbox-2" value="2" />
+              <z-checkbox id="checkbox-2" name="checkbox-2" value="2" />
               <div>
                 <h4>
                   Test name 2

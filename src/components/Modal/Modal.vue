@@ -19,15 +19,15 @@
         <header :class="$style.header">
           <h4 v-if="title" :id="ariaLabel">{{ title }}</h4>
 
-          <g-button
+          <z-button
             v-if="!hideClose"
             icon
             type="button"
             :class="$style.close"
             @click="dismiss"
           >
-            <g-icon name="close" />
-          </g-button>
+            <z-icon name="close" />
+          </z-button>
         </header>
 
         <div :class="$style.content">
@@ -39,7 +39,7 @@
           <slot name="footer">
             <div class="text-right">
               <div class="button-grid">
-                <!-- @slot Modal footer actions, supports rendering up to 2 `<g-button>` children -->
+                <!-- @slot Modal footer actions, supports rendering up to 2 `<z-button>` children -->
                 <slot name="actions"></slot>
               </div>
             </div>
@@ -53,7 +53,7 @@
 
 <script>
   export default {
-    name: 'g-modal',
+    name: 'z-modal',
 
     props: {
       /**

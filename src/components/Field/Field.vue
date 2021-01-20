@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'g-field',
+    name: 'z-field',
     props: {
 
       errorText: {

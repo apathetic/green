@@ -1,6 +1,6 @@
 ---
 title: "CSS utilities"
-description: "CSS Utility library for the GreenUI library"
+description: "CSS Utility library for the ZigZagUI library"
 items:
 - title: Colors
   link: colors.html

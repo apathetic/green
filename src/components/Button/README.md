@@ -4,14 +4,14 @@ Core button component.
 
 ## Usage
 
-This component is registered globally as `<g-button>`.
+This component is registered globally as `<z-button>`.
 
 ```html
- <g-button>Button text</g-button>
+ <z-button>Button text</z-button>
 ```
 
 Default color variant is `primary`. Other variants ( `secondary`, `tertiary`, `inline`, `icon` ) can be passed by Boolean prop:
 
 ```html
- <g-button secondary>Secondary button text</g-button>
+ <z-button secondary>Secondary button text</z-button>
 ```

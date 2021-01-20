@@ -8,7 +8,7 @@
   import { t } from '@/locale';
 
   export default {
-    name: 'g-empty-state',
+    name: 'z-empty-state',
 
     props: {
       text: {

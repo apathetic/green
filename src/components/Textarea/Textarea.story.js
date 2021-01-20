@@ -5,45 +5,45 @@ import llTextarea from '@/components/Textarea';
 storiesOf('Components/-Textarea', module)
   .add('base component', () => ({
     components: { llTextarea },
-    template: '<g-textarea></g-textarea>',
+    template: '<z-textarea></z-textarea>',
   }))
 
   .add('with a label', () => ({
     components: { llTextarea },
-    template:'<g-textarea label="Hello Label"></g-textarea>',
+    template:'<z-textarea label="Hello Label"></z-textarea>',
   }))
 
   .add('with a placeholder', () => ({
     components: { llTextarea },
-    template:'<g-textarea placeholder="One does not simply walk into Mordor"></g-textarea>',
+    template:'<z-textarea placeholder="One does not simply walk into Mordor"></z-textarea>',
   }))
 
   .add('with hint text', () => ({
     components: { llTextarea },
-    template: '<g-textarea hintText="Try entering some text here"></g-textarea>',
+    template: '<z-textarea hintText="Try entering some text here"></z-textarea>',
   }))
 
   .add('label, placeholder, and hint', () => ({
     components: { llTextarea },
-    template: '<g-textarea label="Customer Info" placeholder="something about a customer" hintText="Try entering some text here"></g-textarea>',
+    template: '<z-textarea label="Customer Info" placeholder="something about a customer" hintText="Try entering some text here"></z-textarea>',
   }))
 
   .add('with a default value', () => ({
     components: { llTextarea },
-    template: '<g-textarea value="A default value"></g-textarea>',
+    template: '<z-textarea value="A default value"></z-textarea>',
   }))
 
   .add('with error text', () => ({
     components: { llTextarea },
-    template: '<g-textarea errorText="There is error"></g-textarea>',
+    template: '<z-textarea errorText="There is error"></z-textarea>',
   }))
 
   .add('is disabled', () => ({
     components: { llTextarea },
-    template: '<g-textarea :disabled="true"></g-textarea>',
+    template: '<z-textarea :disabled="true"></z-textarea>',
   }))
 
   .add('is readonly', () => ({
     components: { llTextarea },
-    template: '<g-textarea :readonly="true"></g-textarea>',
+    template: '<z-textarea :readonly="true"></z-textarea>',
   }));

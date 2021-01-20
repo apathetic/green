@@ -7,7 +7,7 @@
     >
 
       <div class="grid grid-cols-4 md:grid-cols-12">
-        <g-input
+        <z-input
           class="col-span-4"
           data-test="input|search-input"
           ref="search-input"
@@ -17,24 +17,24 @@
           @input="onSearch"
         >
           <template #append>
-            <g-icon :name="searchIcon" :class="{'fx-spin color-teal': isSearching}" />
+            <z-icon :name="searchIcon" :class="{'fx-spin color-teal': isSearching}" />
           </template>
-        </g-input>
+        </z-input>
 
         <div v-if="filterSchema.length" class="col-span-1 md:col-span-2 flex align-bottom">
-          <g-button
+          <z-button
             secondary
             :class="[$style['filter-button'], isShowingFilters && 'border-blue color-blue', 'w-full', 'relative']"
             @click="isShowingFilters = !isShowingFilters"
           >
             {{ $t('common.filter') }}
-            <g-icon v-if="isFiltering" :name="filterIcon" :class="{'fx-spin color-teal': isFiltering}" />
-            <g-badge v-if="numberOfFilters" :class="$style['badge-overlap']" :content="numberOfFilters" />
-          </g-button>
+            <z-icon v-if="isFiltering" :name="filterIcon" :class="{'fx-spin color-teal': isFiltering}" />
+            <z-badge v-if="numberOfFilters" :class="$style['badge-overlap']" :content="numberOfFilters" />
+          </z-button>
         </div>
 
         <div v-if="Object.keys(sorts).length" class="col-span-2 md:col-span-3">
-          <g-select
+          <z-select
             ref="sort-input"
             :label="$t('common.sort_by')"
             :placeholder="$t('common.sort_by')"
@@ -43,9 +43,9 @@
             class="w-full"
           >
             <template #caret>
-              <g-icon :name="sortIcon" :class="{'fx-spin color-teal': isSorting}" />
+              <z-icon :name="sortIcon" :class="{'fx-spin color-teal': isSorting}" />
             </template>
-          </g-select>
+          </z-select>
 
         </div>
 
@@ -55,13 +55,13 @@
         </div>
       </div>
 
-      <g-expand :open="isShowingFilters">
+      <z-expand :open="isShowingFilters">
         <Filters
           :schema="filterSchema"
           @reset="clearSearch"
           @change="onFilter"
         />
-      </g-expand>
+      </z-expand>
 
       <slot name="eyebrow"></slot>
     </div>
@@ -74,7 +74,7 @@
       class="flex align-middle align-center"
       :class="[$style['select-bar'], isSelectBarVisible ? '' : 'hidden-lg']"
     >
-      <g-checkbox
+      <z-checkbox
         class="hidden-lg"
         :checked="isSomePageChecked && !!results.length"
         :indeterminate="isSomePageChecked && !isAllPageChecked"
@@ -84,7 +84,7 @@
       />
       <div v-if="!!selectedItems.length" class="w-full flex align-middle align-center">
         <span>{{ $t('common.number_of_total_selected', { num: selectedItems.length, total: results.length }) }}</span>
-        <g-button
+        <z-button
           v-if="selectedItems.length !== results.length"
           class="ml-2 hidden-sm-only"
           inline
@@ -92,15 +92,15 @@
         >
           <span v-if="results.length === items.length">{{ $t('common.selectAll') }}</span>
           <span v-else>{{ $t('common.select_all_that_match') }}</span>
-        </g-button>
-        <g-button
+        </z-button>
+        <z-button
           v-else
           class="ml-2 hidden-sm-only"
           inline
           @click="clearAll"
         >
           {{ $t('common.clear_selection') }}
-        </g-button>
+        </z-button>
         <div class="ml-3">
           <slot name="bulk-actions">
           </slot>
@@ -113,7 +113,7 @@
         v-sticky="isSelectBarVisible ? 120 : 60"
         :class="[$style.header, isSelectBarVisible ? 'no-border' : '']"
       >
-        <g-checkbox
+        <z-checkbox
           v-if="isSelectable"
           :checked="isSomePageChecked"
           :indeterminate="isSomePageChecked && !isAllPageChecked"
@@ -174,13 +174,13 @@
   };
 
   export default {
-    name: 'g-list-view',
+    name: 'z-list-view',
 
     components: {
       Filters,
       Paginate,
       LoadingManager,
-      'g-badge': Badge,
+      'z-badge': Badge,
     },
 
     created() {

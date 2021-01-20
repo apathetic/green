@@ -2,7 +2,7 @@
   <div class="container">
     <nav
       class="g-tabs"
-      :class="{ 'g-tabs--scrollable': !hasIntersectionObserver }"
+      :class="{ 'z-tabs--scrollable': !hasIntersectionObserver }"
     >
       <ul
         class="g-tabs__list"
@@ -14,7 +14,7 @@
         <PageNavigationItem
           v-for="(item, index) in items"
           class="g-tabs__item"
-          :class="{ 'g-tabs__item--invisible': overflowIds.includes(`${index}`) }"
+          :class="{ 'z-tabs__item--invisible': overflowIds.includes(`${index}`) }"
           :data-id="index"
           :href="item.href"
           :index="index"
@@ -25,7 +25,7 @@
           @click="handleClick"
         />
       </ul>
-      <g-dropdown
+      <z-dropdown
         class="g-tabs__dropdown"
         ref="toggle"
         :class="{ 'is-visible': overflowIds.length }"
@@ -47,7 +47,7 @@
         </template>
 
         <template slot="default">
-          <ul :class="`g-tabs__dropdown-list ${$style['g-tabs__dropdown-list']}`">
+          <ul :class="`g-tabs__dropdown-list ${$style['z-tabs__dropdown-list']}`">
             <PageNavigationItem
               v-for="(item, index) in items"
               class="g-tabs__dropdown-item"
@@ -62,7 +62,7 @@
             />
           </ul>
         </template>
-      </g-dropdown>
+      </z-dropdown>
     </nav>
   </div>
 </template>

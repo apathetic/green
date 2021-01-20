@@ -12,22 +12,22 @@ selectable with Enter.
 
 ## Usage
 
-This component is registered globally as `<g-dropdown>`.
+This component is registered globally as `<z-dropdown>`.
 
 In it's current form it manages it's own internal `isActive` state, allowing the consuming application to control it via
 it's slots
 
 #### Basic usage
 
-By default `<g-dropdown>` will render an ellipse icon button as it's toggle. Nested children will be rendered inside the dropdown itself.
+By default `<z-dropdown>` will render an ellipse icon button as it's toggle. Nested children will be rendered inside the dropdown itself.
 
 ```
-<g-dropdown>
+<z-dropdown>
   <ul class="pa-3">
     <li>Item 1</li>
     <li>Item 2</li>
   </ul>
-</g-dropdown>
+</z-dropdown>
 ```
 
 #### With custom toggle
@@ -35,13 +35,13 @@ By default `<g-dropdown>` will render an ellipse icon button as it's toggle. Nes
 You may use the `toggle` named slot to render a custom toggle button. It will be passed a `show` method into it's scope.
 
 ```
-<g-dropdown>
+<z-dropdown>
   <template slot="toggle" slot-scope="{ show }">
     <button
       class="button button--primary"
       @click="show"
     >
-      Love this <g-icon name="heart" />
+      Love this <z-icon name="heart" />
     </button>
   </template>
 
@@ -52,15 +52,15 @@ You may use the `toggle` named slot to render a custom toggle button. It will be
       <li>The other</li>
     </ul>
   </template>
-</g-dropdown>
+</z-dropdown>
 ```
 
 #### With keyable items
 
-Any child inside `<g-dropdown>` that has the class `.dropdown__item` will become keyboard accessible with the up/down keys,
+Any child inside `<z-dropdown>` that has the class `.dropdown__item` will become keyboard accessible with the up/down keys,
 
 ```
-<g-dropdown>
+<z-dropdown>
   <ul>
     <li>
       <a class="button button--secondary dropdown__item" href="#">Edit</a>
@@ -69,5 +69,5 @@ Any child inside `<g-dropdown>` that has the class `.dropdown__item` will become
       <a class="button button--secondary dropdown__item" href="">Delete</a>
     </li>
   </ul>
-</g-dropdown>
+</z-dropdown>
 ```

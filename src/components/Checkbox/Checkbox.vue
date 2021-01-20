@@ -20,7 +20,7 @@
   import { hashCode } from '@/utils/helpers';
 
   export default {
-    name: 'g-checkbox',
+    name: 'z-checkbox',
     model: {
       prop: 'checked',
       event: 'change',

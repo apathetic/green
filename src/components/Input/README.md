@@ -4,8 +4,8 @@ Base input component.
 
 ## Usage
 
-This component is registered globally as `<g-input>`.
+This component is registered globally as `<z-input>`.
 
 ```
-<g-input value="input value">
+<z-input value="input value">
 ```

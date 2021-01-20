@@ -4,13 +4,13 @@ Core "generic form element" component. Why? Well, simply to provide a label on "
 
 ## Usage
 
-This component is registered globally as `<g-field>`
+This component is registered globally as `<z-field>`
 It takes a single `label` prop.
 
 ```html
- <g-field>text text</g-field>
+ <z-field>text text</z-field>
 ```
 
 ```html
- <g-field label="Address">123 Smith st.</g-field>
+ <z-field label="Address">123 Smith st.</z-field>
 ```

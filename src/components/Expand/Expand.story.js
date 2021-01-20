@@ -13,7 +13,7 @@ storiesOf('Components/-Expand', module)
 
     template: `
       <div>
-        <g-button class="mb-3" @click="open = !open">{{ open ? 'Collapse' : 'Expand' }}</g-button>
+        <z-button class="mb-3" @click="open = !open">{{ open ? 'Collapse' : 'Expand' }}</z-button>
 
         <Expand :open="open">
           <p>

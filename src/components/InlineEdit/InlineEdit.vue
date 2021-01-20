@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="inline-edit" :class="inline ? $style['inline']: ''" data-test="g-inline-edit">
-      <g-input
+      <z-input
         v-model="internalValue"
         ref="llInput"
         :disabled="disabled"
@@ -26,17 +26,17 @@
             </slot>
           </div>
         </template>
-      </g-input>
+      </z-input>
 
-      <g-button
+      <z-button
         v-if="inline && !editing && !disabled"
         class="edit-button"
         icon
         :class="[$style['edit-button'], isPrepended ? $style['prepended-button'] : $style['appended-button']]"
         @click.stop="edit"
       >
-        <g-icon name="edit" />
-      </g-button>
+        <z-icon name="edit" />
+      </z-button>
     </div>
 
     <span v-if="showOldValue" :class="[$style['original-value'], 'color-medium mb-0 hint text-strike-through']">
@@ -50,7 +50,7 @@
   import { money, percent } from '@/utils/i18n';
 
   export default {
-    name: 'g-inline-edit',
+    name: 'z-inline-edit',
 
     props: {
       /**

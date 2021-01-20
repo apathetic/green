@@ -17,7 +17,7 @@ export const Basic = () => ({
   },
   template: `
     <div>
-      <g-radio
+      <z-radio
         v-model="checked"
         :disabled="disabled"
         id="radio-1"
@@ -25,7 +25,7 @@ export const Basic = () => ({
         name="radio-1"
         value="1"
       />
-      <g-radio
+      <z-radio
         v-model="checked"
         :disabled="disabled"
         id="radio-2"
@@ -33,7 +33,7 @@ export const Basic = () => ({
         name="radio-2"
         value="2"
       />
-      <g-radio
+      <z-radio
         v-model="checked"
         :disabled="disabled"
         id="radio-3"

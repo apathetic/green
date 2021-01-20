@@ -3,7 +3,7 @@ import { statuses } from '@fixtures';
 import SelectStatus from '@/components/SelectStatus';
 import README from '@/components/SelectStatus/README.md';
 
-Vue.component('g-select-status', SelectStatus);
+Vue.component('z-select-status', SelectStatus);
 
 const defaults = {
   data() {
@@ -21,14 +21,14 @@ export default {
     info: {
       summary: README,
       components: {
-        'g-select-status': SelectStatus,
+        'z-select-status': SelectStatus,
       },
     },
   },
 };
 
 export const Basic = () => ({
-  template: '<g-select-status :statusOptions="options" v-model="value"/>',
+  template: '<z-select-status :statusOptions="options" v-model="value"/>',
   ...defaults,
 });
 
@@ -38,7 +38,7 @@ Basic.story = {
 
 export const BasicWithCustomLabelAndPlaceholder = () => ({
   template:
-    '<g-select-status :statusOptions="options" v-model="value" label="Status" placeholder="Select status" />',
+    '<z-select-status :statusOptions="options" v-model="value" label="Status" placeholder="Select status" />',
   ...defaults,
 });
 
@@ -47,7 +47,7 @@ BasicWithCustomLabelAndPlaceholder.story = {
 };
 
 export const Disabled = () => ({
-  template: '<g-select-status :disabled="true" :statusOptions="options" v-model="value" />',
+  template: '<z-select-status :disabled="true" :statusOptions="options" v-model="value" />',
   ...defaults,
 });
 

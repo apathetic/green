@@ -25,7 +25,7 @@
    * Vue Wrapper Component for the vanillaJS WYSIWYG editor
    */
   export default {
-    name: 'g-text-editor',
+    name: 'z-text-editor',
 
     props: {
       /**

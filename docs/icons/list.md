@@ -1,6 +1,6 @@
 ---
 title: "List"
-description: "GreenUI SVG icons"
+description: "ZigZagUI SVG icons"
 ---
 
 # List of SVG icons

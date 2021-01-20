@@ -1,5 +1,5 @@
 <template>
-  <g-select
+  <z-select
     ref="select"
     single
     :class="$style.select"
@@ -38,7 +38,7 @@
       <span class="text-truncate">{{ props.option.name }}</span>
     </div>
 
-  </g-select>
+  </z-select>
 </template>
 
 
@@ -46,10 +46,10 @@
   import Select from '@/components/Select';
 
   export default {
-    name: 'g-select-status',
+    name: 'z-select-status',
 
     components: {
-      'g-select': Select,
+      'z-select': Select,
     },
 
     props: {

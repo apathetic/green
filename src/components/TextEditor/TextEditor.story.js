@@ -43,7 +43,7 @@ storiesOf('Components/-Text-Editor', module)
   .addParameters({
     info: {
       components: {
-        'g-text-editor': TextEditor,
+        'z-text-editor': TextEditor,
       },
     },
   })
@@ -51,7 +51,7 @@ storiesOf('Components/-Text-Editor', module)
   .add('default editor', () => ({
     template: `
     <div>
-      <g-text-editor
+      <z-text-editor
         :placeholder="'write something'"
         @input="updateText"
       />
@@ -64,7 +64,7 @@ storiesOf('Components/-Text-Editor', module)
   .add('with predefined text', () => ({
     template: `
     <div>
-      <g-text-editor
+      <z-text-editor
         :value="predefined"
         :placeholder="'write something'"
         @input="updateText"
@@ -78,7 +78,7 @@ storiesOf('Components/-Text-Editor', module)
   .add('read only', () => ({
     template: `
     <div>
-      <g-text-editor
+      <z-text-editor
         :read-only="true"
         :value="predefined"
         :placeholder="'write something'"

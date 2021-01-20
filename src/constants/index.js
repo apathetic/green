@@ -1,5 +1,5 @@
 /**
- * GreenUI Global Constants.
+ * ZigZagUI Global Constants.
  * NOTE: as per convention, all constants are written in UPPERCASE.
  */
 

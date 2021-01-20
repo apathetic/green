@@ -13,7 +13,7 @@ const options = [
 
 const defaults = {
   components: {
-    'g-select': Select,
+    'z-select': Select,
   },
   data() {
     return {
@@ -31,7 +31,7 @@ export default {
 export const Single = () => ({
   template: `
       <div style="width:360px">
-        <g-select label="Single" :single="true" :options="options" v-model="basicValue" />
+        <z-select label="Single" :single="true" :options="options" v-model="basicValue" />
         <br/> value: {{ value }}
       </div>`,
   ...defaults,
@@ -41,7 +41,7 @@ export const Multiple = () => ({
   template: `
       <div>
         <div style="width:360px">
-          <g-select label="Multiple" hint="Notice 'overflow' treatment when 5+ are selected" :options="options" v-model="value" />
+          <z-select label="Multiple" hint="Notice 'overflow' treatment when 5+ are selected" :options="options" v-model="value" />
         </div>
         <br/> value: {{ value }}
       </div>`,
@@ -54,10 +54,10 @@ export const Small = () => ({
         <h3 class="mb-3">Min width is 144px. How to accommodate info at this size?</h3>
         <div class="flex">
           <div style="width:144px">
-            <g-select label="Multiple" :options="options" v-model="value" />
+            <z-select label="Multiple" :options="options" v-model="value" />
           </div>
           <div class="flex-1 ml-2">
-            <g-input label="First/Last Name" placeholder="I am another thing in the layout" />
+            <z-input label="First/Last Name" placeholder="I am another thing in the layout" />
           </div>
         </div>
       </div>`,
@@ -68,7 +68,7 @@ export const Searchable = () => ({
   template: `
       <div style="width:360px">
         <p></p>
-        <g-select :searchable="true" :searchBy="['name', 'id']" :options="options" hint="Search by 'name' or 'id'" />
+        <z-select :searchable="true" :searchBy="['name', 'id']" :options="options" hint="Search by 'name' or 'id'" />
       </div>
     `,
   ...defaults,
@@ -79,10 +79,10 @@ export const Accessible = () => ({
       <div>
         <p>Tab through the fields. Hit enter / space to toggle, use the keyboard navigation. ESC to dismiss.</p>
         <div class="grid grid--2cols">
-          <g-input label="Name" placeholder="nuthin" />
-          <g-input label="SSN" placeholder="empty" />
-          <g-select label="Credit Card" :options="options" />
-          <div class="input"><label>button</label> <g-button>clicky</g-button> </div>
+          <z-input label="Name" placeholder="nuthin" />
+          <z-input label="SSN" placeholder="empty" />
+          <z-select label="Credit Card" :options="options" />
+          <div class="input"><label>button</label> <z-button>clicky</z-button> </div>
         </div>
       </div>
     `,
@@ -90,21 +90,21 @@ export const Accessible = () => ({
 });
 
 export const Disabled = () => ({
-  template: '<g-select :disabled="true" :value="value" />',
+  template: '<z-select :disabled="true" :value="value" />',
   ...defaults,
 });
 
 export const Errors = () => ({
-  template: '<g-select :options="options" v-model="value" error="Please enter a valid email" />',
+  template: '<z-select :options="options" v-model="value" error="Please enter a valid email" />',
   ...defaults,
 });
 
 export const CustomIcons = () => ({
   template: `
       <div style="width:360px">
-        <g-select icon="add"  label="Add"  :options="options" class="mb-2" />
-        <g-select icon="edit" label="Edit" :options="options" class="mb-2" />
-        <g-select icon="view" label="View" :options="options" class="mb-2" />
+        <z-select icon="add"  label="Add"  :options="options" class="mb-2" />
+        <z-select icon="edit" label="Edit" :options="options" class="mb-2" />
+        <z-select icon="view" label="View" :options="options" class="mb-2" />
       </div>
     `,
   ...defaults,
@@ -112,22 +112,22 @@ export const CustomIcons = () => ({
 
 export const CustomOption = () => ({
   template: `
-      <g-select :options="options">
+      <z-select :options="options">
         <div class="flex align-justify" slot="option" slot-scope="props">
           <span class="text-truncate">{{ props.option.name }}</span>
           <small>({{ props.option.quantity }} Available)</small>
         </div>
-      </g-select>
+      </z-select>
     `,
   ...defaults,
 
   // .add('custom `selected` display', () => ({
   //   template: `
-  //     <g-select :options="options">
+  //     <z-select :options="options">
   //       <div class="flex align-left align-middle" slot="selected-option" slot-scope="props">
   //         <span>{{ props.option.name }} ({{ props.option.quantity }} Available)</span>
   //       </div>
-  //     </g-select>
+  //     </z-select>
   //   `,
   //   ...defaults,
 });
