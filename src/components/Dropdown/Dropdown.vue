@@ -222,16 +222,6 @@
 
 <style lang="scss" module>
   .button {
-    height: space(4);
-    width: space(4);
-
-    &::after {
-      content: "";
-      height: 44px;
-      left: -3px;
-      position: absolute;
-      top: -3px;
-      width: 44px;
-    }
+    border: border(thin);
   }
 </style>

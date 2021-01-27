@@ -55,13 +55,13 @@
         </div>
       </div>
 
-      <z-expand :open="isShowingFilters">
-        <Filters
+      <z-collapse :open="isShowingFilters">
+        <z-filters
           :schema="filterSchema"
           @reset="clearSearch"
           @change="onFilter"
         />
-      </z-expand>
+      </z-collapse>
 
       <slot name="eyebrow"></slot>
     </div>
@@ -146,7 +146,7 @@
       :total="results.length"
     ></slot>
 
-    <Paginate
+    <z-paginate
       v-if="results.length > pageSize"
       :current-page="currentPage"
       :list-length="results.length"
@@ -177,8 +177,8 @@
     name: 'z-list-view',
 
     components: {
-      Filters,
-      Paginate,
+      'z-filters': Filters,
+      'z-paginate': Paginate,
       LoadingManager,
       'z-badge': Badge,
     },

@@ -1,10 +1,7 @@
 <template functional>
   <span
-    class="badge"
-    :class="[
-      data.staticClass,
-      props.color && $options.generateColorClass('color', props.license)
-    ]"
+    class="badge text-small bg-blue color-white pa-1 rounded"
+    :class="[ data.staticClass ]"
     :title="!!props.title && props.title"
   >
     <template v-if="props.text">
@@ -14,8 +11,6 @@
 </template>
 
 <script>
-  import { generateColorClass } from '@/utils/helpers';
-
   export default {
     name: 'z-chip',
 
@@ -36,7 +31,5 @@
         default: '',
       },
     },
-
-    generateColorClass,
   };
 </script>

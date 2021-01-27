@@ -9,15 +9,6 @@ items:
 # - title: Cards
 #   link: cards.html
 #   details: .
-- title: Images
-  link: imagery.html
-  details: Guidelines for user-generated images on the platform
-- title: Layout
-  link: layout.html
-  details: Page layouts and page sections
-- title: List Items
-  link: list-items.html
-  details: Core UX patterns for "records" in a list
 - title: Notifications
   link: notifications.html
   details: Surfacing feedback to the user

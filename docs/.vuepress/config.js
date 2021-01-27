@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   title: 'ZigZagUI',
   description: 'Design patterns, CSS / JS, Accessibility, Icons',
+  base: "/zigzag-ui/",
   head: [
     ["link", { rel: "icon", href: "/images/favicon.png" }],
     ["meta", { name: "theme-color", content: "#00adb5" }],
@@ -15,13 +16,27 @@ module.exports = {
         path:'/components/',
         title:'Components',
         children: [
+          'components/badge',
           'components/button',
           'components/checkbox',
           'components/chip',
-          //'components/dropdown',
-          'components/input',
-          'components/select',
+          'components/collapse',
           // 'components/datepicker',
+          'components/dropdown',
+          'components/emptystate',
+          'components/field',
+          'components/icon',
+          'components/inline-edit',
+          'components/input',
+          'components/list-view',
+          'components/loading',
+          'components/modal',
+          'components/paginate',
+          'components/radio',
+          'components/select-status',
+          'components/select',
+          'components/textarea',
+          // 'components/texteditor',
           // ...
         ]
       },

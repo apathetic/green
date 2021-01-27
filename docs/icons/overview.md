@@ -23,9 +23,3 @@ The final SVG should look similar to the following
     <path d="M0 0h24v24H0z"/>
     ...
 ```
-
-## Optimization
-
-SVGO is a useful tool that can be used to cleanup icons post-export from Figma
-
-* [SVGO](https://jakearchibald.github.io/svgomg/)

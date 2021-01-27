@@ -60,14 +60,7 @@
       href: {
         type: String,
         default: '',
-      },
-      /**
-       * e2e test id
-       */
-      dataTest: {
-        type: String,
-        default: 'z-button',
-      },
+      }
     },
 
     generateClass(props, data) {

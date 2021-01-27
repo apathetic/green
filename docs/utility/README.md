@@ -24,6 +24,9 @@ items:
 ---
 
 <div class="features">
+  <p>ZigZag started with a utility library to power the display of the components herein. Over time, the syntax and functionality of the CSS utilities has migrated to align closely with the <a href="https://tailwindcss.com/">Tailwind</a> framework.</p>
+
+  <p>At this point in time, you may decide to forego this CSS bundle in deference to Tailwind if you like. Alternatively, you can use the CSS utilities herein as they're already built specifically in support of this library and are very minimal.</p>
   <div
     v-for="(feature, index) in $page.frontmatter.items"
     :key="index"

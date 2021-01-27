@@ -1,5 +1,5 @@
 <template>
-  <div :class="['input', 'z-select', {'has-error': error}]" data-test="g-select">
+  <div :class="['input', 'z-select', {'has-error': error}]">
     <label v-if="label" class="input-label">{{ label }}</label>
 
     <!-- -SELECT -->
@@ -435,7 +435,7 @@
   $MAX_DRAWER_HEIGHT: 300px; // TODO, this number. Share w/ dropdown, date, etc
   $CHIP_HEIGHT: 22px; // TODO, this.
 
-  .g-select {
+  .z-select {
     height: input('height'); // ie. space(4)
   }
 

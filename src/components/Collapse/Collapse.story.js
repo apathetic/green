@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/vue';
-import Expand from '@/components/Expand';
+import Collapse from '@/components/Collapse';
 
 storiesOf('Components/-Expand', module)
   .add('basic', () => ({
-    components: { Expand },
+    components: { Collapse },
 
     data() {
       return {

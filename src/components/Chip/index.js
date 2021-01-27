@@ -1,3 +1,4 @@
-// import Chip from './Chip.vue';
+import Chip from './Chip.vue';
 
-// export default Chip;
+export { Chip };
+export default Chip;

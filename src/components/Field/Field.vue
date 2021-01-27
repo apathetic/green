@@ -11,12 +11,12 @@
     name: 'z-field',
     props: {
 
-      errorText: {
+      error: {
         type: String,
         default: '',
       },
 
-      hintText: {
+      hint: {
         type: String,
         default: '',
       },
@@ -37,15 +37,15 @@
 
     computed: {
       hasError() {
-        return !!(this.errorText || this.errors && this.errors.length);
+        return !!(this.error || this.errors && this.errors.length);
       },
 
       helperText() {
-        const { errors, errorText, hintText } = this;
+        const { errors, error, hint } = this;
 
         return errors.length ? `${ errors[0].$message }` :
-          errorText ? errorText :
-          hintText ? hintText :
+          error ? error :
+          hint ? hint :
           '';
       },
     },

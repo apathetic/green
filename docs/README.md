@@ -3,7 +3,7 @@ home: true
 heroText: ZigZagUI
 tagline: POC Vue Component library
 actionText: Get Started →
-actionLink: developer/overview
+actionLink: components/
 items:
 - title: Components
   link: components/
