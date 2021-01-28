@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Design Tokens | ZigZagUI</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/zigzag-ui/images/favicon.png">
+    <meta name="description" content="Functions, mixins, and utilities.">
+    <meta name="theme-color" content="#00adb5">
+    
+    <link rel="preload" href="/zigzag-ui/assets/css/0.styles.10587b03.css" as="style"><link rel="preload" href="/zigzag-ui/assets/js/app.eac8b93f.js" as="script"><link rel="preload" href="/zigzag-ui/assets/js/3.fabfa625.js" as="script"><link rel="preload" href="/zigzag-ui/assets/js/38.9ab1e6cf.js" as="script"><link rel="prefetch" href="/zigzag-ui/assets/js/10.5cebf6f1.js"><link rel="prefetch" href="/zigzag-ui/assets/js/11.fb9b1be0.js"><link rel="prefetch" href="/zigzag-ui/assets/js/12.551ccbcb.js"><link rel="prefetch" href="/zigzag-ui/assets/js/13.1a574539.js"><link rel="prefetch" href="/zigzag-ui/assets/js/14.af0d9501.js"><link rel="prefetch" href="/zigzag-ui/assets/js/15.69cf600f.js"><link rel="prefetch" href="/zigzag-ui/assets/js/16.614f1b8b.js"><link rel="prefetch" href="/zigzag-ui/assets/js/17.042b5381.js"><link rel="prefetch" href="/zigzag-ui/assets/js/18.4be2dfcd.js"><link rel="prefetch" href="/zigzag-ui/assets/js/19.8ea70621.js"><link rel="prefetch" href="/zigzag-ui/assets/js/2.9e8959f3.js"><link rel="prefetch" href="/zigzag-ui/assets/js/20.ce05e678.js"><link rel="prefetch" href="/zigzag-ui/assets/js/21.22e6af59.js"><link rel="prefetch" href="/zigzag-ui/assets/js/22.89b73f44.js"><link rel="prefetch" href="/zigzag-ui/assets/js/23.079bf3e9.js"><link rel="prefetch" href="/zigzag-ui/assets/js/24.67f303f9.js"><link rel="prefetch" href="/zigzag-ui/assets/js/25.0d13807e.js"><link rel="prefetch" href="/zigzag-ui/assets/js/26.ac5a64a3.js"><link rel="prefetch" href="/zigzag-ui/assets/js/27.15b5f776.js"><link rel="prefetch" href="/zigzag-ui/assets/js/28.f3a08b6f.js"><link rel="prefetch" href="/zigzag-ui/assets/js/29.89bbca95.js"><link rel="prefetch" href="/zigzag-ui/assets/js/30.9bf1321f.js"><link rel="prefetch" href="/zigzag-ui/assets/js/31.e9a6ce1f.js"><link rel="prefetch" href="/zigzag-ui/assets/js/32.7bb977d6.js"><link rel="prefetch" href="/zigzag-ui/assets/js/33.2e4c6c69.js"><link rel="prefetch" href="/zigzag-ui/assets/js/34.dac0e35c.js"><link rel="prefetch" href="/zigzag-ui/assets/js/35.a5a84beb.js"><link rel="prefetch" href="/zigzag-ui/assets/js/36.7ca4bd17.js"><link rel="prefetch" href="/zigzag-ui/assets/js/37.044f51fc.js"><link rel="prefetch" href="/zigzag-ui/assets/js/39.1aa81f50.js"><link rel="prefetch" href="/zigzag-ui/assets/js/4.2b6d0c5c.js"><link rel="prefetch" href="/zigzag-ui/assets/js/40.0555cd95.js"><link rel="prefetch" href="/zigzag-ui/assets/js/41.93583301.js"><link rel="prefetch" href="/zigzag-ui/assets/js/42.2d58d48f.js"><link rel="prefetch" href="/zigzag-ui/assets/js/43.47707336.js"><link rel="prefetch" href="/zigzag-ui/assets/js/44.b44e5ff0.js"><link rel="prefetch" href="/zigzag-ui/assets/js/45.46819e4e.js"><link rel="prefetch" href="/zigzag-ui/assets/js/5.c81cdf27.js"><link rel="prefetch" href="/zigzag-ui/assets/js/6.166bfa20.js"><link rel="prefetch" href="/zigzag-ui/assets/js/7.178e8c52.js"><link rel="prefetch" href="/zigzag-ui/assets/js/8.86c2e175.js"><link rel="prefetch" href="/zigzag-ui/assets/js/9.1616d20c.js">
+    <link rel="stylesheet" href="/zigzag-ui/assets/css/0.styles.10587b03.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zigzag-ui/" class="home-link router-link-active"><!----> <span class="site-name">ZigZagUI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/zigzag-ui/components/" class="sidebar-heading clickable open"><span>Components</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/zigzag-ui/components/badge.html" class="sidebar-link">Badge</a></li><li><a href="/zigzag-ui/components/button.html" class="sidebar-link">Button</a></li><li><a href="/zigzag-ui/components/checkbox.html" class="sidebar-link">Checkbox</a></li><li><a href="/zigzag-ui/components/chip.html" class="sidebar-link">Chip</a></li><li><a href="/zigzag-ui/components/collapse.html" class="sidebar-link">Collapse</a></li><li><a href="/zigzag-ui/components/dropdown.html" class="sidebar-link">Dropdown</a></li><li><a href="/zigzag-ui/components/emptystate.html" class="sidebar-link">EmptyState</a></li><li><a href="/zigzag-ui/components/field.html" class="sidebar-link">Field</a></li><li><a href="/zigzag-ui/components/icon.html" class="sidebar-link">Icon</a></li><li><a href="/zigzag-ui/components/inline-edit.html" class="sidebar-link">Inline edit</a></li><li><a href="/zigzag-ui/components/input.html" class="sidebar-link">Input</a></li><li><a href="/zigzag-ui/components/list-view.html" class="sidebar-link">List View</a></li><li><a href="/zigzag-ui/components/loading.html" class="sidebar-link">Loading</a></li><li><a href="/zigzag-ui/components/modal.html" class="sidebar-link">Modal</a></li><li><a href="/zigzag-ui/components/paginate.html" class="sidebar-link">Paginate</a></li><li><a href="/zigzag-ui/components/radio.html" class="sidebar-link">Radio button</a></li><li><a href="/zigzag-ui/components/select-status.html" class="sidebar-link">Status select</a></li><li><a href="/zigzag-ui/components/select.html" class="sidebar-link">Select</a></li><li><a href="/zigzag-ui/components/textarea.html" class="sidebar-link">Text area</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/zigzag-ui/patterns/" class="sidebar-heading clickable"><span>Patterns</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/zigzag-ui/utility/" class="sidebar-heading clickable"><span>Utility</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/zigzag-ui/accessibility/" class="sidebar-link">Accessibility</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/zigzag-ui/icons/" class="sidebar-heading clickable"><span>Icons</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="design-tokens"><a href="#design-tokens" class="header-anchor">#</a> Design Tokens</h1> <h2 id="color"><a href="#color" class="header-anchor">#</a> Color</h2> <blockquote><p>Classes and helpers for setting an element's background color, or text color.</p></blockquote> <p>There are a number of color classes, as well as helper utilities to set the color of an element. You should (almost) never need to add CSS to change color; instead, prefer to use one of the utility classes listed herein.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>colors(<code>&lt;token&gt;</code>, <code>&lt;value&gt;</code>)</p></div> <h3 id="brand"><a href="#brand" class="header-anchor">#</a> Brand</h3> <p>$purple: #1e164b !default;
+$royal: #303ab2 !default;
+$blue: #0072f0 !default;
+$seafoam: #3cdbc0 !default;
+$teal: #01bbc8 !default;
+$green: #00816d !default;
+$yellow: #ffd400 !default;
+$orange: #ff9425 !default;
+$watermelon: #e5554f !default;</p> <h3 id="text"><a href="#text" class="header-anchor">#</a> Text</h3> <p>$text-colors: (
+'light': #c5c9d4,
+'medium': #676a6c,
+'dark': #262626,
+'white': #fff,
+'inverted': #fff,
+'disabled': rgba(#000, 0.38),
+'link': $blue,
+'hover': $hover
+);</p> <h3 id="ui"><a href="#ui" class="header-anchor">#</a> UI</h3> <blockquote><p>Buttons</p></blockquote> <p>$theme-button-primary: $blue !default;
+$theme-button-hover: $hover !default;
+$theme-button-active: $royal !default;</p> <p>$button-colors: (
+'primary': $theme-button-primary,
+'hover': $theme-button-hover,
+'active': rgba(#999, 0.4),
+'secondary': transparent,
+'secondary-hover': rgba(103, 106, 108, 0.08),
+'tertiary': transparent,
+'tertiary-hover': rgba(#fff, 0.15),
+'tertiary-active': $theme-button-active,
+'disabled': rgba(#000, 0.26)
+);</p> <h3 id="alerts"><a href="#alerts" class="header-anchor">#</a> Alerts</h3> <p>$alert-colors: (
+'error': #e4002b,
+'warning': #ff9425,
+'success': $teal,
+'info': $teal,  // TODO should be different? maybe blue
+);</p> <h3 id="shades"><a href="#shades" class="header-anchor">#</a> Shades</h3> <p>// NOTE: for typography, use text-colors, above.
+$shades: (
+'white': #fff,
+'light-grey': #eef2f4,
+'grey': #c5c9d4,
+'dark-grey': #676a6c,
+'black': #262626
+);</p> <h2 id="layout"><a href="#layout" class="header-anchor">#</a> Layout</h2> <div class="custom-block tip"><p class="custom-block-title">Mixin</p> <div class="language-css extra-class"><pre class="language-css"><code> @include <span class="token function">breakpoint</span><span class="token punctuation">(</span>$value<span class="token punctuation">)</span>
+</code></pre></div><p>The <code>breakpoint</code> mixin accepts one of the following <code>$values</code>:</p> <table><thead><tr><th style="text-align:left;"></th> <th>small</th> <th>medium</th> <th>large</th> <th>x-large</th></tr></thead> <tbody><tr><td style="text-align:left;">only</td> <td><code>sm-only</code></td> <td><code>md-only</code></td> <td><code>lg-only</code></td> <td>-</td></tr> <tr><td style="text-align:left;">here and up</td> <td>-</td> <td><code>md</code></td> <td><code>lg</code></td> <td><code>xl</code></td></tr> <tr><td style="text-align:left;">here <em>and down</em></td> <td>-</td> <td><code>md-and-down</code></td> <td><code>lg-and-down</code></td> <td>-</td></tr></tbody></table> <p><em>(note the inutility of <code>sm-and-down</code>, or <code>xl-only</code>, etc.)</em></p></div> <p>@mixin cover($scope: absolute) {
+bottom: 0;
+left: 0;
+opacity: 0;
+position: $scope; // absolute | fixed
+right: 0;
+top: 0;
+}</p> <p><strong>Cover</strong></p> <div class="custom-block tip"><p class="custom-block-title">Mixin</p> <div class="language-css extra-class"><pre class="language-css"><code> @include <span class="token function">cover</span><span class="token punctuation">(</span>$<span class="token property">scope</span><span class="token punctuation">:</span> <span class="token string">'absolute'</span><span class="token punctuation">)</span>
+</code></pre></div></div> <p><strong>clearfix</strong></p> <p>Hopefully you'll never need this.</p> <div class="custom-block tip"><p class="custom-block-title">Mixin</p> <div class="language-css extra-class"><pre class="language-css"><code> @include clearfix
+</code></pre></div></div> <p>@mixin sticky {
+$sticky-offset: $top-nav-height + space(3);</p> <p>max-height: calc(100vh - #{$sticky-offset + space(3)});
+position: sticky; // note: no effect IE11
+top: $sticky-offset;
+}</p> <p>@mixin span($cols) {
+grid-column: span #{$cols};
+}</p> <p>@mixin column($cols:1, $offset:null) {
+@if $offset != null {
+grid-column: #{$offset+1} / span #{$cols};
+}
+@else {
+@include span($cols);
+}
+}</p> <h1 id="misc"><a href="#misc" class="header-anchor">#</a> Misc</h1> <div class="custom-block tip"><p class="custom-block-title">Mixin</p> <div class="language-css extra-class"><pre class="language-css"><code> @include screenreader-only 
+</code></pre></div></div> <div class="custom-block tip"><p class="custom-block-title">Mixin</p> <p>There is also a sass function to access preset border values:</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token function">border</span><span class="token punctuation">(</span>$size<span class="token punctuation">,</span> $color<span class="token punctuation">)</span>
+</code></pre></div><ul><li><strong>$size</strong>: can be <code>thin</code>, <code>medium</code>, or `thick</li> <li><strong>$color</strong>: can be any hexcode, but prefer using default values / colors in the settings file.</li></ul> <p>example: <code>border('thin')</code>, <code>border('thin', colors('brand', 'blue') )</code></p></div> <p>@function z-index($key) {</p> <p>@include elevation($z)
+The <code>elevation</code> mixin accepts one of the following <code>$z</code> values:</p> <table><thead><tr><th style="text-align:left;">z</th> <th>usage</th></tr></thead> <tbody><tr><td style="text-align:left;">0</td> <td>&quot;hard&quot; elevation, for input focus states</td></tr> <tr><td style="text-align:left;">1</td> <td>&quot;sm&quot;, used with product cards, e.g.</td></tr> <tr><td style="text-align:left;">2</td> <td>&quot;md&quot;, used with modals, e.g.</td></tr> <tr><td style="text-align:left;">3</td> <td>&quot;lg&quot;, content boxes, e.g.</td></tr></tbody></table> <p>:::</p> <h1 id="display"><a href="#display" class="header-anchor">#</a> Display</h1> <p>Control the padding on an element using a <code>p{a|x|y|t|r|b|l}-{size}</code> class.</p> <div class="custom-block tip"><p class="custom-block-title">Modifiers</p> <div class="language- extra-class"><pre class="language-text"><code>  a = all
+  x = x-axis (left, right)
+  y = y-axis (top, bottom)
+  t = top
+  r = right
+  b = bottom
+  l = left
+</code></pre></div></div> <p>@function space($key) {
+@if not map-has-key($spacers, $key) {
+@warn 'No spacer found for <code>#{$key}</code>.';</p> <div class="language- extra-class"><pre><code>@return map-get($spacers, 3);
+</code></pre></div><p>}</p> <p>@return map-get($spacers, $key);
+}</p> <h1 id="typo"><a href="#typo" class="header-anchor">#</a> TYPO</h1> <p>@function font-weight($weight: regular) {
+@function typo($keys...) {
+@mixin clamp($rows: 3) {
+@function icon($keys...) {
+@mixin heading($level) {</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/zigzag-ui/assets/js/app.eac8b93f.js" defer></script><script src="/zigzag-ui/assets/js/3.fabfa625.js" defer></script><script src="/zigzag-ui/assets/js/38.9ab1e6cf.js" defer></script>
+  </body>
+</html>
